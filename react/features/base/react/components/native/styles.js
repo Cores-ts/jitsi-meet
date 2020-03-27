@@ -129,7 +129,17 @@ const SECTION_LIST_STYLES = {
         alignItems: 'center',
         flex: 1,
         flexDirection: 'row',
-        padding: 5
+        padding: 5,
+        paddingLeft: 10,
+        marginTop: 10,
+        marginLeft: 13,
+        marginRight: 13,
+        borderRadius: 5,
+        borderTopLeftRadius: 0,
+        borderBottomLeftRadius: 0,
+        borderLeftWidth: 4,
+        borderLeftColor: '#ffa400',
+        backgroundColor: '#fff0d509'
     },
 
     listItemDetails: {
@@ -140,18 +150,20 @@ const SECTION_LIST_STYLES = {
     },
 
     listItemText: {
-        color: OVERLAY_FONT_COLOR,
-        fontSize: 14
+        color: 'rgba(255, 255, 255, 0.5)',
+        fontSize: 12,
+        marginLeft: 10
     },
 
     listItemTitle: {
-        fontWeight: 'bold',
+        color: '#4342ff',
+        fontWeight: '900',
         fontSize: 16
     },
 
     listSection: {
         alignItems: 'center',
-        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        backgroundColor: 'transparent',
         flex: 1,
         flexDirection: 'row',
         paddingVertical: 5,
@@ -159,9 +171,10 @@ const SECTION_LIST_STYLES = {
     },
 
     listSectionText: {
-        color: OVERLAY_FONT_COLOR,
-        fontSize: 14,
-        fontWeight: 'normal'
+        color: '#fff',
+        fontSize: 28,
+        fontWeight: '900',
+        marginTop: 20
     },
 
     pullToRefresh: {

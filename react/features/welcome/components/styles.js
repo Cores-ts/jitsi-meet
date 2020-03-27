@@ -266,7 +266,7 @@ export default {
         borderRadius: 4,
         borderWidth: 2,
         color: TEXT_COLOR,
-        fontSize: 23,
+        fontSize: 18,
         height: 50,
         padding: 4,
         textAlign: 'center'
