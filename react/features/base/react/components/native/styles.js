@@ -2,7 +2,7 @@
 
 import { BoxModel, ColorPalette } from '../../../styles';
 
-const OVERLAY_FONT_COLOR = 'rgba(255, 255, 255, 0.6)';
+const OVERLAY_FONT_COLOR = 'rgba(255, 255, 255, 0.9)';
 const SECONDARY_ACTION_BUTTON_SIZE = 30;
 
 export const AVATAR_SIZE = 65;

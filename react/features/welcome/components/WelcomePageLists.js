@@ -78,6 +78,18 @@ class WelcomePageLists extends Component<Props> {
             }
         ];
 
+        pages.push({
+            component: CalendarList,
+            icon: IconEventNote,
+            title: 'Scheduled'
+        });
+
+        pages.push({
+            component: CalendarList,
+            icon: IconEventNote,
+            title: 'Webinars'
+        });
+        
         if (_calendarEnabled) {
             pages.push(
                 {
@@ -87,7 +99,7 @@ class WelcomePageLists extends Component<Props> {
                 }
             );
         }
-
+        
         return (
             <PagedList
                 defaultPage = { _defaultPage }

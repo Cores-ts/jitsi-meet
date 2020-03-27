@@ -57,8 +57,8 @@ export default {
     button: {
         backgroundColor: ColorPalette.blue,
         borderColor: ColorPalette.blue,
-        borderRadius: 4,
-        borderWidth: 1,
+        borderRadius: 15,
+        borderWidth: 0,
         height: 30,
         justifyContent: 'center',
         paddingHorizontal: 20
@@ -264,7 +264,7 @@ export default {
         backgroundColor: 'transparent',
         borderColor: ColorPalette.white,
         borderRadius: 4,
-        borderWidth: 1,
+        borderWidth: 2,
         color: TEXT_COLOR,
         fontSize: 23,
         height: 50,

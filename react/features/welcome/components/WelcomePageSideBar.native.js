@@ -111,10 +111,6 @@ class WelcomePageSideBar extends Component<Props> {
                             icon = { IconInfo }
                             label = 'welcomepage.privacy'
                             url = { PRIVACY_URL } />
-                        <SideBarItem
-                            icon = { IconInfo }
-                            label = 'welcomepage.sendFeedback'
-                            url = { SEND_FEEDBACK_URL } />
                     </ScrollView>
                 </SafeAreaView>
             </SlidingView>

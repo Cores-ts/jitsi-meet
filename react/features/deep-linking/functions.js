@@ -30,7 +30,7 @@ export function generateDeepLinkingURL() {
     // Android: use an intent link, custom schemes don't work in all browsers.
     // https://developer.chrome.com/multidevice/android/intents
     if (Platform.OS === 'android') {
-        // https://meet.jit.si/foo -> meet.jit.si/foo
+        // https://meetings.fundingbox.com/foo -> meetings.fundingbox.com/foo
         const url = href.replace(regex, '').substr(2);
         const pkg = interfaceConfig.ANDROID_APP_PACKAGE || 'org.jitsi.meet';
 

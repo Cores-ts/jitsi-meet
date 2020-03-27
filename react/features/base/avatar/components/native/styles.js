@@ -70,9 +70,9 @@ export default {
 
     initialsText: (size: number = DEFAULT_SIZE) => {
         return {
-            color: 'rgba(255, 255, 255, 0.6)',
+            color: 'rgba(255, 255, 255, 1)',
             fontSize: size * 0.45,
-            fontWeight: '100'
+            fontWeight: '800'
         };
     },
 
