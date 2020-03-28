@@ -124,7 +124,7 @@ class RecentList extends AbstractRecentList<Props> {
      * @returns {void}
      */
     _onShowDialInInfo(itemId) {
-        this.props.dispatch(showDialInSummary(itemId.url));
+    this.props.dispatch(showDialInSummary(itemId.url));
     }
 }
 

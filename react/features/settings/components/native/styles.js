@@ -56,7 +56,7 @@ export default {
      */
     fieldSeparator: {
         borderBottomWidth: 1,
-        borderColor: 'rgba(0, 0, 0, 0.1)'
+        borderColor: 'rgba(255, 255, 255, 0.1)'
     },
 
     /**
@@ -74,12 +74,13 @@ export default {
      * Style fo the form section separator titles.
      */
     formSectionTitle: {
-        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+        color: '#fff',
+        backgroundColor: 'blue',
         padding: 5
     },
 
     settingsForm: {
-        backgroundColor: ColorPalette.white,
+        backgroundColor: ColorPalette.blue,
         flex: 1
     },
 
@@ -87,27 +88,29 @@ export default {
      * Global {@code Text} color for the components.
      */
     text: {
-        color: ColorPalette.black
+        color: ColorPalette.white
     },
 
     /**
      * Standard text input field style.
      */
     textInputField: {
-        color: ColorPalette.black,
+        color: '#ffffff60',
         flex: 1,
         fontSize: TEXT_SIZE,
-        textAlign: 'right'
+        textAlign: 'right',
+        minHeight: 40
     },
 
     /**
      * Appended style for column layout fields.
      */
     textInputFieldColumn: {
-        backgroundColor: 'rgb(245, 245, 245)',
+        backgroundColor: '#000',
         borderRadius: 8,
         marginVertical: 5,
         paddingVertical: 3,
+        paddingHorizontal: 8,
         textAlign: 'left'
     }
 };

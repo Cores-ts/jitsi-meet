@@ -178,12 +178,12 @@ class WelcomePageSideBar extends Component<Props> {
             clientId: '61kqrvroz2fexlyajdea',
             clientSecret: 'HO0PDYuFeWH71mBKUgpaeWFnXLKWvakRXAnf1Cq2CFogmeKI70C',
             redirectUrl: 'com.fundingbox.meetings://oauth',
-            scopes: ['identity.profile'],
+            scopes: ['identity.profile', 'identity.email', 'identity.contact_info'],
             useNonce: false,
             serviceConfiguration: {
                 authorizationEndpoint: 'https://auth.fundingbox.com/authorize',
                 tokenEndpoint: 'https://auth.fundingbox.com/token',
-                identityEndpoint: 'https://auth.fundingbox.com/me'
+                identityEndpoint: 'https://auth.fundingbox.com/me/emails'
             }
         };
 
@@ -218,6 +218,7 @@ class WelcomePageSideBar extends Component<Props> {
                 jitsiLocalStorage.setItem('user_id', json._id);
                 jitsiLocalStorage.setItem('user_username', json.username);
                 jitsiLocalStorage.setItem('user_displayName', `${json.profile.name.first} ${json.profile.name.last}` );
+                jitsiLocalStorage.setItem('user_email', json.emails[0].address);
 
                 console.log(jitsiLocalStorage.getItem('user_displayName'))
                 //this.setState(json);

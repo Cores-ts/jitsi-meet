@@ -158,7 +158,6 @@ export function getInviteResultsForQuery(
         peopleSearchPromise = Promise.resolve([]);
     }
 
-
     let hasCountryCode = text.startsWith('+');
     let phoneNumberPromise;
 
@@ -520,7 +519,7 @@ export function getDialInfoPageURLForURIString(
         return undefined;
     }
     const { protocol, host, contextRoot, room } = parseURIString(uri);
-
+    console.log(`${protocol}//${host}${contextRoot}static/dialInInfo.html?room=${room}`)
     return `${protocol}//${host}${contextRoot}static/dialInInfo.html?room=${room}`;
 }
 

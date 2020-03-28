@@ -36,6 +36,7 @@ import styles, { PLACEHOLDER_TEXT_COLOR } from './styles';
 import VideoSwitch from './VideoSwitch';
 import WelcomePageLists from './WelcomePageLists';
 import WelcomePageSideBar from './WelcomePageSideBar';
+import SwipeablePanel from 'rn-swipeable-panel';
 
 /**
  * The native container rendering the welcome page.
@@ -53,6 +54,7 @@ class WelcomePage extends AbstractWelcomePage {
 
         this.state._fieldFocused = false;
         this.state.hintBoxAnimation = new Animated.Value(0);
+        this.state.swipeablePanelActive = false;
 
         // Bind event handlers so they are only bound once per instance.
         this._onFieldFocusChange = this._onFieldFocusChange.bind(this);
@@ -74,7 +76,7 @@ class WelcomePage extends AbstractWelcomePage {
      */
     componentDidMount() {
         super.componentDidMount();
-
+        this.openPanel();
         const { dispatch } = this.props;
 
         if (this.props._settings.startAudioOnly) {
@@ -89,6 +91,18 @@ class WelcomePage extends AbstractWelcomePage {
             });
         }
     }
+
+    openPanel = () => {
+        this.setState({
+            swipeablePanelActive: true
+        });
+    };
+
+    closePanel = () => {
+        this.setState({
+            swipeablePanelActive: false
+        });
+    };
 
     /**
      * Implements React's {@link Component#render()}. Renders a prompt for
@@ -207,7 +221,6 @@ class WelcomePage extends AbstractWelcomePage {
         const { t } = this.props;
         let children;
 
-
         if (this.state.joining) {
             // TouchableHighlight is picky about what its children can be, so
             // wrap it in a native component, i.e. View to avoid having to
@@ -226,7 +239,6 @@ class WelcomePage extends AbstractWelcomePage {
                 </Text>
             );
         }
-
 
         const buttonDisabled = this._isJoinDisabled();
 
@@ -294,8 +306,10 @@ class WelcomePage extends AbstractWelcomePage {
                     <WelcomePageLists disabled = { this.state._fieldFocused } />
                     <SettingsView />
                     <DialInSummary />
+                    
                 </View>
                 <WelcomePageSideBar />
+                
             </LocalVideoTrackUnderlay>
         );
     }

@@ -8,9 +8,7 @@ import { type Dispatch } from 'redux';
 import { openDialog } from '../../../../base/dialog';
 import { translate } from '../../../../base/i18n';
 import {
-    HeaderWithNavigation,
-    LoadingIndicator,
-    SlidingView
+    LoadingIndicator
 } from '../../../../base/react';
 import { connect } from '../../../../base/redux';
 
@@ -19,6 +17,7 @@ import { getDialInfoPageURLForURIString } from '../../../functions';
 
 import DialInSummaryErrorDialog from './DialInSummaryErrorDialog';
 import styles, { INDICATOR_COLOR } from './styles';
+import SwipeablePanel from 'rn-swipeable-panel';
 
 type Props = {
 
@@ -55,26 +54,37 @@ class DialInSummary extends Component<Props> {
      * @inheritdoc
      */
     render() {
+    
         const { _summaryUrl } = this.props;
-
         return (
-            <SlidingView
-                onHide = { this._onCloseView }
-                position = 'bottom'
-                show = { Boolean(_summaryUrl) } >
-                <View style = { styles.webViewWrapper }>
-                    <HeaderWithNavigation
-                        headerLabelKey = 'info.label'
-                        onPressBack = { this._onCloseView } />
+            
+					 <SwipeablePanel
+                        fullWidth
+                        showCloseButton
+                        closeOnTouchOutside
+                    isActive = {
+                        Boolean(_summaryUrl)
+                    }
+                    onClose = {
+                        this._onCloseView
+                    }
+                    onPressCloseButton = {
+                        this._onCloseView
+                    }
+                > 
+                <View style={styles.webViewWrapper}>
+                    
                     <WebView
                         onError = { this._onError }
                         onShouldStartLoadWithRequest = { this._onNavigate }
                         renderLoading = { this._renderLoading }
                         source = {{ uri: getDialInfoPageURLForURIString(_summaryUrl) }}
                         startInLoadingState = { true }
-                        style = { styles.webView } />
+                            style={styles.webView} />
+                        
                 </View>
-            </SlidingView>
+            </SwipeablePanel>
+				
         );
     }
 
@@ -119,7 +129,7 @@ class DialInSummary extends Component<Props> {
      */
     _onNavigate(request) {
         const { url } = request;
-
+        
         if (url.startsWith('tel:')) {
             Linking.openURL(url);
             this.props.dispatch(hideDialInSummary());
@@ -136,6 +146,7 @@ class DialInSummary extends Component<Props> {
      * @returns {React$Component<any>}
      */
     _renderLoading() {
+        
         return (
             <View style = { styles.indicatorWrapper }>
                 <LoadingIndicator

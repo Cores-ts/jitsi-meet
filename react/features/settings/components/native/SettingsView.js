@@ -380,7 +380,7 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                             keyboardType = { 'email-address' }
                             onChangeText = { this._onChangeEmail }
                             placeholder = 'email@example.com'
-                            value = { email } />
+                            value = { jitsiLocalStorage.getItem('user_email') || email } />
                     </FormRow>
                     <FormSectionHeader
                         label = 'settingsView.conferenceSection' />
