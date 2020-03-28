@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Alert, NativeModules, SafeAreaView, ScrollView, Switch, Text, TextInput, View } from 'react-native';
+import jitsiLocalStorage from '../../../../../modules/util/JitsiLocalStorage';
 
 import { ColorSchemeRegistry } from '../../../base/color-scheme';
 import { translate } from '../../../base/i18n';
@@ -90,6 +91,7 @@ class SettingsView extends AbstractSettingsView<Props, State> {
      */
     constructor(props) {
         super(props);
+
         const {
             disableCallIntegration,
             disableP2P,
@@ -367,7 +369,7 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                             autoCorrect = { false }
                             onChangeText = { this._onChangeDisplayName }
                             placeholder = 'John Doe'
-                            value = { displayName } />
+                            value = { jitsiLocalStorage.getItem('user_displayName') || displayName } />
                     </FormRow>
                     <FormRow
                         label = 'settingsView.email'

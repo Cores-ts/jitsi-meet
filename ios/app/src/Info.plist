@@ -30,6 +30,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>org.jitsi.meet</string>
+				<string>com.fundingbox.meetings</string>
 			</array>
 		</dict>
 		<dict>
@@ -40,6 +41,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.your-id-here</string>
+				<string>com.fundingbox.meetings</string>
 			</array>
 		</dict>
 	</array>

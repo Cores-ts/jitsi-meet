@@ -12,7 +12,7 @@ const SIDEBAR_HEADER_HEIGHT = 150;
 
 export const SWITCH_THUMB_COLOR = ColorPalette.blueHighlight;
 
-export const SWITCH_UNDER_COLOR = 'rgba(0, 0, 0, 0.4)';
+export const SWITCH_UNDER_COLOR = 'rgba(0, 0, 0, 0)';
 
 /**
  * The default color of text on the WelcomePage.
@@ -202,7 +202,7 @@ export default {
      * The body of the side bar where the items are.
      */
     sideBarBody: {
-        backgroundColor: ColorPalette.white,
+        backgroundColor: '#211d28',
         flex: 1
     },
 
@@ -237,7 +237,7 @@ export default {
      * The icon in the side bar item touchables.
      */
     sideBarItemIcon: {
-        color: ColorPalette.blueHighlight,
+        color: '#fff',
         fontSize: 20,
         marginRight: 15
     },
@@ -246,7 +246,7 @@ export default {
      * The label of the side bar item touchables.
      */
     sideBarItemText: {
-        color: ColorPalette.black,
+        color: '#fff',
         fontWeight: 'bold'
     },
 
@@ -261,8 +261,8 @@ export default {
      * Room input style.
      */
     textInput: {
-        backgroundColor: 'transparent',
-        borderColor: ColorPalette.white,
+        backgroundColor: '#ffffff10',
+        borderColor: '#ffffffa0',
         borderRadius: 4,
         borderWidth: 2,
         color: TEXT_COLOR,

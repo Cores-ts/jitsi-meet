@@ -266,6 +266,9 @@ PODS:
     - React-cxxreact (= 0.61.5-jitsi.1)
     - React-jsi (= 0.61.5-jitsi.1)
   - React-jsinspector (0.61.5-jitsi.1)
+  - react-native-app-auth (5.1.1):
+    - AppAuth (= 1.2.0)
+    - React
   - react-native-background-timer (2.1.1):
     - React
   - react-native-calendar-events (1.7.3):
@@ -373,6 +376,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-app-auth (from `../node_modules/react-native-app-auth`)
   - react-native-background-timer (from `../node_modules/react-native-background-timer`)
   - react-native-calendar-events (from `../node_modules/react-native-calendar-events`)
   - react-native-keep-awake (from `../node_modules/react-native-keep-awake`)
@@ -450,6 +454,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-app-auth:
+    :path: "../node_modules/react-native-app-auth"
   react-native-background-timer:
     :path: "../node_modules/react-native-background-timer"
   react-native-calendar-events:
@@ -530,6 +536,7 @@ SPEC CHECKSUMS:
   React-jsi: 4f35c1a2273d193a80c1c3831c808413840c260c
   React-jsiexecutor: de1c37cf59ae9adcbf2be82eea0e090dc3f3205e
   React-jsinspector: b76c4e84a7833bb4c90549d59ed53ec299ff912b
+  react-native-app-auth: 048f9ea8c2358ce1207207a0e74fb16563a3a2bd
   react-native-background-timer: 0d34748e53a972507c66963490c775321a88f6f2
   react-native-calendar-events: 2fe35a9294af05de0ed819d3a1b5dac048d2c010
   react-native-keep-awake: eba3137546b10003361b37c761f6c429b59814ae
@@ -553,6 +560,6 @@ SPEC CHECKSUMS:
   RNWatch: 09738b339eceb66e4d80a2371633ca5fb380fa42
   Yoga: 7b4209fda2441f99d54dd6cf4c82b094409bb68f
 
-PODFILE CHECKSUM: 0fdfa45ae809c9460c80be3e0d4bbb822fccc418
+PODFILE CHECKSUM: 92e60ff4089f2d92df84b9d583ccb1cef583bbf2
 
 COCOAPODS: 1.8.4

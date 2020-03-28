@@ -18,6 +18,9 @@
 #import "AppDelegate.h"
 #import "FIRUtilities.h"
 #import "Types.h"
+#import <React/RCTBridge.h>
+#import <React/RCTBundleURLProvider.h>
+#import <React/RCTRootView.h>
 
 @import Crashlytics;
 @import Fabric;
@@ -104,7 +107,10 @@
     }
 
     NSURL *openUrl = url;
-
+    NSLog(@"Token Response%@",
+    openUrl);
+  
+  
     if ([FIRUtilities appContainsRealServiceInfoPlist]) {
         // Process Firebase Dynamic Links
         FIRDynamicLink *dynamicLink = [[FIRDynamicLinks dynamicLinks] dynamicLinkFromCustomSchemeURL:url];
@@ -117,6 +123,15 @@
     return [[JitsiMeet sharedInstance] application:app
                                            openURL:openUrl
                                            options:options];
+}
+
+- (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
+{
+#if DEBUG
+  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+#else
+  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+#endif
 }
 
 @end

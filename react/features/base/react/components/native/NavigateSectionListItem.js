@@ -139,7 +139,7 @@ export default class NavigateSectionListItem extends Component<Props> {
         return (
             <Swipeout
                 autoClose = { true }
-                backgroundColor = { ColorPalette.transparent }
+                backgroundColor={ColorPalette.transparent}
                 right = { right }>
                 <AvatarListItem
                     item = { item }

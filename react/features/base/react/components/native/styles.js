@@ -27,14 +27,19 @@ const PAGED_LIST_STYLES = {
         alignItems: 'center',
         flexDirection: 'column',
         justifyContent: 'center',
-        padding: BoxModel.padding / 2
+        padding: BoxModel.padding / 2,
+        backgroundColor: '#fff',
+        borderRadius: 30,
+        width: 50,
+        height: 50,
+        marginTop: 20
     },
 
     /**
      * Additional style for the active indicator icon (Android).
      */
     pageIndicatorActive: {
-        color: ColorPalette.white
+        color: '#713dec'
     },
 
     /**
@@ -58,14 +63,15 @@ const PAGED_LIST_STYLES = {
      */
     pageIndicatorIcon: {
         color: ColorPalette.blueHighlight,
-        fontSize: 24
+        fontSize: 30
     },
 
     /**
      * Label of the page indicator (Android).
      */
     pageIndicatorText: {
-        color: ColorPalette.blueHighlight
+        color: ColorPalette.blueHighlight,
+        display: 'none'
     },
 
     /**
@@ -131,15 +137,12 @@ const SECTION_LIST_STYLES = {
         flexDirection: 'row',
         padding: 5,
         paddingLeft: 10,
-        marginTop: 10,
         marginLeft: 13,
         marginRight: 13,
         borderRadius: 5,
-        borderTopLeftRadius: 0,
-        borderBottomLeftRadius: 0,
         borderLeftWidth: 4,
         borderLeftColor: '#ffa400',
-        backgroundColor: '#fff0d509'
+        backgroundColor: '#713dec'
     },
 
     listItemDetails: {
