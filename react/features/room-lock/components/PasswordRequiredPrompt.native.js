@@ -4,10 +4,21 @@ import React, { Component } from 'react';
 import type { Dispatch } from 'redux';
 
 import { setPassword } from '../../base/conference';
-import { InputDialog } from '../../base/dialog';
 import { connect } from '../../base/redux';
 
+import {
+    StyleSheet,
+    Text,
+    View,
+    ScrollView,
+    TouchableHighlight
+} from 'react-native';
+import CodeInput from 'react-native-confirmation-code-input';
+
 import { _cancelPasswordRequiredPrompt } from '../actions';
+import {
+    ColorPalette
+} from '../../base/styles';
 
 /**
  * {@code PasswordRequiredPrompt}'s React {@code Component} prop types.
@@ -39,6 +50,49 @@ type State = {
      */
     password: ?string
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 0,
+        height: '100%',
+        width: '100%',
+        position: 'absolute',
+        backgroundColor: ColorPalette.blue
+    },
+    titleWrapper: {
+        flex: 1,
+        justifyContent: 'center',
+        flexDirection: 'row',
+    },
+    wrapper: {
+        marginTop: '30%'
+    },
+    inputWrapper3: {
+        paddingVertical: 50,
+        paddingHorizontal: 20
+    },
+    inputLabel3: {
+        color: '#fff',
+        fontSize: 22,
+        fontWeight: '800',
+        textAlign: 'center'
+    },
+    cancelContainer: {
+        textAlign: 'center',
+        marginTop: 100,
+    },
+    cancel: {
+        color: '#ffffff5f',
+        textAlign: 'center',
+        fontSize: 16,
+        fontWeight: '800' 
+    }
+});
+
+const _TEXT_INPUT_PROPS = {
+    codeLength: 6,
+    keyboardType: 'default'
+};
 
 /**
  * Implements a React {@code Component} which prompts the user when a password
@@ -91,7 +145,17 @@ class PasswordRequiredPrompt extends Component<Props, State> {
     render() {
         const { password } = this.state;
 
-        return (
+        let textInputProps = _TEXT_INPUT_PROPS;
+
+        if (this.props.passwordNumberOfDigits) {
+            textInputProps = {
+                ...textInputProps,
+                keyboardType: 'number-pad',
+                codeLength: this.props.passwordNumberOfDigits
+            };
+        }
+
+       /* return (
             <InputDialog
                 contentKey = 'dialog.passwordLabel'
                 initialValue = { password }
@@ -101,8 +165,58 @@ class PasswordRequiredPrompt extends Component<Props, State> {
                 textInputProps = {{
                     secureTextEntry: true
                 }} />
-        );
+        );*/
+        return (
+      <View style={styles.container}>
+        <ScrollView style={styles.wrapper}>
+         
+          <View style={styles.inputWrapper3}>
+            <Text style={styles.inputLabel3}>Enter a {textInputProps.codeLength} characters PIN Code</Text>
+            <CodeInput
+                ref="codeInputRef"
+                //secureTextEntry
+                //keyboardType="number-pad"
+                codeLength={textInputProps.codeLength}
+                keyboardType={textInputProps.keyboardType}
+                className = 'border-box'
+                autoFocus={true}
+                size={50}
+                space={14}
+                containerStyle={{ top: 30 }}
+                codeInputStyle = {
+                    {
+                        fontWeight: '800',
+                        fontSize: 22,
+                        borderRadius: 5,
+                        width: 40
+                    }
+                }
+                            onFulfill={(code) => this._onFulfill(code)} />
+                        
+                        <TouchableHighlight style={styles.cancelContainer}
+               
+                onPress = { this._onCancel }>
+                <Text style = { styles.cancel }>
+                    Cancel
+                </Text>
+                
+            </TouchableHighlight>
+                        
+          </View>
+        </ScrollView> 
+      </View>
+    );
     }
+
+    _onFulfill(code: ? string) {
+        console.log("LOCK", code);
+         const { conference }: { conference: { join: Function } } = this.props;
+
+        this.props.dispatch(setPassword(conference, conference.join, code));
+
+        this.refs.codeInputRef.clear();
+         return true;
+        }
 
     _onCancel: () => boolean;
 

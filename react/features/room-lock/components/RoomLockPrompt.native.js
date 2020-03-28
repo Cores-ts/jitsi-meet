@@ -3,10 +3,19 @@
 import React, { Component } from 'react';
 import type { Dispatch } from 'redux';
 
-import { InputDialog } from '../../base/dialog';
+import {
+    StyleSheet,
+    Text,
+    View,
+    ScrollView,
+    TouchableHighlight
+} from 'react-native';
+
 import { connect } from '../../base/redux';
 
 import { endRoomLockRequest } from '../actions';
+import CodeInput from 'react-native-confirmation-code-input';
+import { ColorPalette } from '../../base/styles';
 
 /**
  * The style of the {@link TextInput} rendered by {@code RoomLockPrompt}. As it
@@ -14,9 +23,47 @@ import { endRoomLockRequest } from '../actions';
  * the entry of the password is a pain to deal with as a user.
  */
 const _TEXT_INPUT_PROPS = {
-    autoCapitalize: 'none',
-    autoCorrect: false
+    codeLength: 6,
+    keyboardType: 'default'
 };
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 0,
+        height: '100%',
+        width:  '100%',
+        position: 'absolute',
+        backgroundColor: ColorPalette.blue
+    },
+    titleWrapper: {
+        flex: 1,
+        justifyContent: 'center',
+        flexDirection: 'row',
+    },
+    wrapper: {
+        marginTop: '30%'
+    },
+    inputWrapper3: {
+        paddingVertical: 50,
+        paddingHorizontal: 20
+    },
+    inputLabel3: {
+        color: '#fff',
+        fontSize: 22,
+        fontWeight: '800',
+        textAlign: 'center'
+    },
+    cancelContainer: {
+            textAlign: 'center',
+            marginTop: 100,
+        },
+        cancel: {
+            color: '#ffffff5f',
+            textAlign: 'center',
+            fontSize: 16,
+            fontWeight: '800'
+        }
+});
 
 /**
  * The type of the React {@code Component} props of {@link RoomLockPrompt}.
@@ -72,10 +119,11 @@ class RoomLockPrompt extends Component<Props> {
             textInputProps = {
                 ...textInputProps,
                 keyboardType: 'number-pad',
-                maxLength: this.props.passwordNumberOfDigits
+                codeLength: this.props.passwordNumberOfDigits
             };
         }
 
+        /*
         return (
             <InputDialog
                 contentKey = 'dialog.passwordLabel'
@@ -83,9 +131,71 @@ class RoomLockPrompt extends Component<Props> {
                 onSubmit = { this._onSubmit }
                 textInputProps = { textInputProps }
                 validateInput = { this._validateInput } />
+            <View style={styles.titleWrapper}>
+            <Text style={styles.title}>CODE INPUT DEMO</Text>
+            </View>
+            <CodeInput
+                ref="codeInputRef"
+                //secureTextEntry
+                keyboardType="numeric"
+                codeLength={6}
+                className='border-circle'
+                autoFocus={true}
+                size={50}
+                containerStyle={{ top: 30 }}
+                codeInputStyle={{ fontWeight: '800' }}
+                onFulfill={(code) => this._onFulfill(code)}/>
         );
+        */
+        
+        return (
+      <View style={styles.container}>
+        <ScrollView style={styles.wrapper}>
+         
+          <View style={styles.inputWrapper3}>
+            <Text style={styles.inputLabel3}>Enter a {textInputProps.codeLength} characters PIN Code</Text>
+            <CodeInput
+                ref="codeInputRef"
+                //secureTextEntry
+                //keyboardType="number-pad"
+                codeLength={textInputProps.codeLength}
+                keyboardType={textInputProps.keyboardType}
+                className = 'border-box'
+                autoFocus={true}
+                size={50}
+                space={14}
+                containerStyle={{ top: 30 }}
+                codeInputStyle = {
+                    {
+                        fontWeight: '800',
+                        fontSize: 22,
+                        borderRadius: 5,
+                        width: 40
+                    }
+                }
+                onFulfill={(code) => this._onFulfill(code)}/>
+                <TouchableHighlight style={styles.cancelContainer}
+               
+                onPress = { this._onCancel }>
+                <Text style = { styles.cancel }>
+                    Cancel
+                </Text>
+                
+            </TouchableHighlight>
+          </View>
+        </ScrollView> 
+      </View>
+    );
     }
 
+    _onFulfill(code) {
+        console.log("LOCK", code);
+         this.props.dispatch(endRoomLockRequest(this.props.conference, code));
+
+        this.refs.codeInputRef.clear();
+         return true;
+        }
+   
     _onCancel: () => boolean;
 
     /**
@@ -113,6 +223,7 @@ class RoomLockPrompt extends Component<Props> {
      * after setting the password is resolved.
      */
     _onSubmit(value: ?string) {
+        console.log("LOCK",value)
         this.props.dispatch(endRoomLockRequest(this.props.conference, value));
 
         return false; // Do not hide.

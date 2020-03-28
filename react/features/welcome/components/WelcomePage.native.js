@@ -36,7 +36,6 @@ import styles, { PLACEHOLDER_TEXT_COLOR } from './styles';
 import VideoSwitch from './VideoSwitch';
 import WelcomePageLists from './WelcomePageLists';
 import WelcomePageSideBar from './WelcomePageSideBar';
-import SwipeablePanel from 'rn-swipeable-panel';
 
 /**
  * The native container rendering the welcome page.

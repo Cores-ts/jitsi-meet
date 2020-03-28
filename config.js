@@ -39,7 +39,6 @@ var config = {
     // The real JID of focus participant - can be overridden here
     // focusUserJid: 'focus@auth.jitsi-meet.example.com',
 
-
     // Testing / experimental features.
     //
 
@@ -66,7 +65,6 @@ var config = {
     // Disables ICE/TCP by filtering out local and remote TCP candidates in
     // signalling.
     // webrtcIceTcpDisable: false,
-
 
     // Media
     //
@@ -246,7 +244,6 @@ var config = {
     // open any channel).
     // openBridgeChannel: true,
 
-
     // UI
     //
 
@@ -287,8 +284,8 @@ var config = {
     // lockRoomGuestEnabled: false,
 
     // When enabled the password used for locking a room is restricted to up to the number of digits specified
-    // roomPasswordNumberOfDigits: 10,
-    // default: roomPasswordNumberOfDigits: false,
+    roomPasswordNumberOfDigits: 6,
+    //default: roomPasswordNumberOfDigits: true,
 
     // Message to show the users. Example: 'The service will be down for
     // maintenance at 01:00 AM GMT,
@@ -328,7 +325,6 @@ var config = {
     // This means avatars will be locally generated and callstats integration
     // will not function.
     // disableThirdPartyRequests: false,
-
 
     // Peer-To-Peer mode: used (if enabled) when there are just 2 participants.
     //
@@ -515,7 +511,6 @@ var config = {
      nick
      startBitrate
      */
-
 
     // Allow all above example options to include a trailing comma and
     // prevent fear when commenting out the last value.
