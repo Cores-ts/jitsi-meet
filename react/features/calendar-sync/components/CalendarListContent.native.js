@@ -14,7 +14,6 @@ import { connect } from '../../base/redux';
 
 import { refreshCalendar, openUpdateCalendarEventDialog } from '../actions';
 
-
 /**
  * The type of the React {@code Component} props of
  * {@link CalendarListContent}.
@@ -161,7 +160,14 @@ class CalendarListContent extends Component<Props> {
      */
     _toDateString(event) {
         const startDateTime
-            = getLocalizedDateFormatter(event.startDate).format('MMM Do, YYYY');
+            = getLocalizedDateFormatter(event.startDate).calendar(null, {
+                sameDay: '[Today]',
+                nextDay: '[Tomorrow]',
+                nextWeek: 'dddd',
+                lastDay: '[Yesterday]',
+                lastWeek: '[Last] dddd',
+                sameElse: 'll'
+            });
 
         return `${startDateTime}`;
     }
@@ -181,9 +187,14 @@ class CalendarListContent extends Component<Props> {
             key: `${event.id}-${event.startDate}`,
             lines: [
                 event.url,
-                this._toTimeString(event)
+                this._toTimeString(event),
+                " ",
+                event.description,
+                event.notes
             ],
             title: event.title,
+            notes: event.notes,
+            description: event.description,
             url: event.url
         };
     }

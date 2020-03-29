@@ -1,9 +1,11 @@
 // @flow
 
 import { BoxModel, ColorPalette } from '../../../styles';
+import { Dimensions } from "react-native";
 
 const OVERLAY_FONT_COLOR = 'rgba(255, 255, 255, 0.9)';
 const SECONDARY_ACTION_BUTTON_SIZE = 30;
+const iconPosition = Math.round(Dimensions.get('window').width/2) - 55;
 
 export const AVATAR_SIZE = 65;
 export const UNDERLAY_COLOR = 'rgba(255, 255, 255, 0.2)';
@@ -34,7 +36,6 @@ const PAGED_LIST_STYLES = {
         height: 45,
         marginTop: 10,
         marginBottom: 10,
-        borderRadius: 10,
         borderWidth: 0,
         borderColor: '#fff'
     },
@@ -43,9 +44,17 @@ const PAGED_LIST_STYLES = {
      * Additional style for the active indicator icon (Android).
      */
     pageIndicatorActive: {
-        color: '#713dec',
+        backgroundColor: '#713dec'
+    },
+
+    /**
+     * Additional style for the active indicator icon (Android).
+     */
+    pageIndicatorPlus: {
         backgroundColor: '#713dec',
-        borderWidth: 0
+        width: 80,
+        height: 80,
+        borderRadius: 50
     },
 
     /**
@@ -59,9 +68,10 @@ const PAGED_LIST_STYLES = {
         borderRadius: 100,
         position: 'absolute',
         margin: 0,
-        bottom: 10,
+        bottom: 20,
         left: 10,
-        right: 10
+        right: 10,
+        height: 60
     },
 
     pageIndicatorContent: {
@@ -135,7 +145,7 @@ const SECTION_LIST_STYLES = {
      * The top level container style of the list.
      */
     container: {
-        flex: 1
+        flex: 1,
     },
 
     list: {
@@ -149,12 +159,17 @@ const SECTION_LIST_STYLES = {
         flexDirection: 'row',
         padding: 5,
         paddingLeft: 10,
+        marginTop: 10,
         marginLeft: 13,
         marginRight: 13,
         borderRadius: 5,
         borderLeftWidth: 4,
-        borderLeftColor: '#ffa400',
-        backgroundColor: '#713dec'
+        borderLeftColor: '#4342ff',
+        backgroundColor: '#00000030'
+    },
+
+    lastListItem: {
+        marginBottom: 100
     },
 
     listItemDetails: {
@@ -171,8 +186,8 @@ const SECTION_LIST_STYLES = {
     },
 
     listItemTitle: {
-        color: '#4342ff',
-        fontWeight: '900',
+        color: '#fff',
+        fontWeight: '700',
         fontSize: 16
     },
 
@@ -187,9 +202,9 @@ const SECTION_LIST_STYLES = {
 
     listSectionText: {
         color: '#fff',
-        fontSize: 28,
-        fontWeight: '900',
-        marginTop: 20
+        fontSize: 24,
+        fontWeight: '800',
+        marginTop: 40
     },
 
     pullToRefresh: {

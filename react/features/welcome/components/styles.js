@@ -261,10 +261,10 @@ export default {
      * Room input style.
      */
     textInput: {
-        backgroundColor: '#ffffff10',
-        borderColor: '#ffffffa0',
-        borderRadius: 4,
-        borderWidth: 2,
+        backgroundColor: '#00000050',
+        borderColor: '#ffffff10',
+        borderRadius: 25,
+        borderWidth: 1,
         color: TEXT_COLOR,
         fontSize: 18,
         height: 50,

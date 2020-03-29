@@ -54,37 +54,37 @@ class DialInSummary extends Component<Props> {
      * @inheritdoc
      */
     render() {
-    
+
         const { _summaryUrl } = this.props;
+
         return (
-            
-					 <SwipeablePanel
-                        fullWidth
-                        showCloseButton
-                        closeOnTouchOutside
-                    isActive = {
-                        Boolean(_summaryUrl)
-                    }
-                    onClose = {
-                        this._onCloseView
-                    }
-                    onPressCloseButton = {
-                        this._onCloseView
-                    }
-                > 
-                <View style={styles.webViewWrapper}>
-                    
+
+            <SwipeablePanel
+                fullWidth = { true }
+                showCloseButton = { true }
+                closeOnTouchOutside = { true }
+                isActive = {
+                    Boolean(_summaryUrl)
+                }
+                onClose = {
+                    this._onCloseView
+                }
+                onPressCloseButton = {
+                    this._onCloseView
+                }>
+                <View style = { styles.webViewWrapper }>
+
                     <WebView
                         onError = { this._onError }
                         onShouldStartLoadWithRequest = { this._onNavigate }
                         renderLoading = { this._renderLoading }
                         source = {{ uri: getDialInfoPageURLForURIString(_summaryUrl) }}
                         startInLoadingState = { true }
-                            style={styles.webView} />
-                        
+                        style = { styles.webView } />
+
                 </View>
             </SwipeablePanel>
-				
+
         );
     }
 
@@ -129,7 +129,7 @@ class DialInSummary extends Component<Props> {
      */
     _onNavigate(request) {
         const { url } = request;
-        
+
         if (url.startsWith('tel:')) {
             Linking.openURL(url);
             this.props.dispatch(hideDialInSummary());
@@ -146,7 +146,7 @@ class DialInSummary extends Component<Props> {
      * @returns {React$Component<any>}
      */
     _renderLoading() {
-        
+
         return (
             <View style = { styles.indicatorWrapper }>
                 <LoadingIndicator

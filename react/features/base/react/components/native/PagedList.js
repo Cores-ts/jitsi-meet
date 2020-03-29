@@ -126,6 +126,10 @@ class PagedList extends Component<Props, State> {
         if (this.state.pageIndex === indicatorIndex) {
             return styles.pageIndicatorActive;
         }
+        
+        if (indicatorIndex === 1) {
+            return styles.pageIndicatorPlus;
+        }
 
         return null;
     }

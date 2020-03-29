@@ -33,9 +33,22 @@ export default class NavigateSectionListSectionHeader extends Component<Props> {
         return (
             <Container style = { styles.listSection }>
                 <Text style = { styles.listSectionText }>
-                    { section.title }
+                    { this._capitalize(section.title) }
                 </Text>
             </Container>
         );
+    }
+
+    _capitalize: (string) => string;
+
+    /**
+     * Capitalizes the first letter.
+     *
+     * @param {string} str - The text to convert.
+     * @private
+     * @returns {string} The modified string.
+     */
+    _capitalize(str: string) {
+        return str.slice(0, 1).toUpperCase() + str.slice(1);
     }
 }

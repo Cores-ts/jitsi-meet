@@ -16,7 +16,7 @@ export default {
         alignItems: 'center',
         flexDirection: 'row',
         minHeight: 65,
-        paddingHorizontal: 8
+        paddingHorizontal: 15
     },
 
     /**
@@ -34,7 +34,8 @@ export default {
     fieldLabelContainer: {
         alignItems: 'center',
         flexDirection: 'row',
-        marginRight: 5
+        marginRight: 5,
+        marginTop: 10
     },
 
     /**
@@ -74,9 +75,15 @@ export default {
      * Style fo the form section separator titles.
      */
     formSectionTitle: {
-        color: '#fff',
-        backgroundColor: 'blue',
-        padding: 5
+        padding: 5,
+        paddingLeft: 15,
+        marginTop: 40
+    },
+
+    formSectionTitleText: {
+        color: '#ffffff60',
+        fontSize: 18,
+        fontWeight: '900'
     },
 
     settingsForm: {
@@ -106,7 +113,7 @@ export default {
      * Appended style for column layout fields.
      */
     textInputFieldColumn: {
-        backgroundColor: '#000',
+        backgroundColor: '#00000040',
         borderRadius: 8,
         marginVertical: 5,
         paddingVertical: 3,
