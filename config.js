@@ -264,7 +264,7 @@ var config = {
     // Enabling pre join page will add an additional step before starting the meeting,
     // where the user can configure its devices and choose the way he
     // joins audio (by phone/or web).
-    // prejoinPageEnabled: false,
+    prejoinPageEnabled: false,
 
     // Disable hiding of remote thumbnails when in a 1-on-1 conference call.
     // disable1On1Mode: false,

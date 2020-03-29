@@ -14,7 +14,7 @@ var interfaceConfig = {
     INITIAL_TOOLBAR_TIMEOUT: 20000,
     TOOLBAR_TIMEOUT: 4000,
     TOOLBAR_ALWAYS_VISIBLE: false,
-    DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Jitster',
+    DEFAULT_REMOTE_DISPLAY_NAME: 'Participant',
     DEFAULT_LOCAL_DISPLAY_NAME: 'me',
     SHOW_JITSI_WATERMARK: true,
     JITSI_WATERMARK_LINK: 'https://fundingbox.com',
@@ -206,7 +206,7 @@ var interfaceConfig = {
     * If this is set to false, the banner will not be rendered at all. If set to true, the check for extension(s)
     * being already installed is done before rendering.
     */
-    SHOW_CHROME_EXTENSION_BANNER: false
+    SHOW_CHROME_EXTENSION_BANNER: false,
 
     /**
      * When enabled, the kick participant button will not be presented for users without a JWT
@@ -232,12 +232,12 @@ var interfaceConfig = {
     /**
      * Specify mobile app scheme for opening the app from the mobile browser.
      */
-    // APP_SCHEME: 'com.fundingbox.meetings',
+    APP_SCHEME: 'com.fundingbox.meetings',
 
     /**
      * Specify the Android app package name.
      */
-    // ANDROID_APP_PACKAGE: 'com.fundingbox.meetings',
+    ANDROID_APP_PACKAGE: 'com.fundingbox.meetings',
 
     /**
      * Override the behavior of some notifications to remain displayed until
