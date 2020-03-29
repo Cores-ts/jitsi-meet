@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react';
-import { Linking, View } from 'react-native';
+import { Linking, Text, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { type Dispatch } from 'redux';
 
@@ -60,18 +60,15 @@ class DialInSummary extends Component<Props> {
         return (
 
             <SwipeablePanel
-                fullWidth = { true }
-                showCloseButton = { true }
+                barStyle = { styles.bar }
                 closeOnTouchOutside = { true }
-                isActive = {
-                    Boolean(_summaryUrl)
-                }
-                onClose = {
-                    this._onCloseView
-                }
-                onPressCloseButton = {
-                    this._onCloseView
-                }>
+                fullWidth = { true }
+                isActive = { Boolean(_summaryUrl) }
+                onClose = { this._onCloseView }
+                onPressCloseButton = { this._onCloseView }
+                onlyLarge = { true }
+                showCloseButton = { true }>
+
                 <View style = { styles.webViewWrapper }>
 
                     <WebView

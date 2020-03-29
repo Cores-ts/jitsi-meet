@@ -519,7 +519,7 @@ export function getDialInfoPageURLForURIString(
         return undefined;
     }
     const { protocol, host, contextRoot, room } = parseURIString(uri);
-    console.log(`${protocol}//${host}${contextRoot}static/dialInInfo.html?room=${room}`)
+    console.log(uri, `${protocol}//${host}${contextRoot}static/dialInInfo.html?room=${room}`)
     return `${protocol}//${host}${contextRoot}static/dialInInfo.html?room=${room}`;
 }
 
