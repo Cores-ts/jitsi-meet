@@ -28,18 +28,24 @@ const PAGED_LIST_STYLES = {
         flexDirection: 'column',
         justifyContent: 'center',
         padding: BoxModel.padding / 2,
-        backgroundColor: '#fff',
-        borderRadius: 30,
-        width: 50,
-        height: 50,
-        marginTop: 20
+        backgroundColor: 'transparent',
+        borderRadius: 10,
+        width: 45,
+        height: 45,
+        marginTop: 10,
+        marginBottom: 10,
+        borderRadius: 10,
+        borderWidth: 0,
+        borderColor: '#fff'
     },
 
     /**
      * Additional style for the active indicator icon (Android).
      */
     pageIndicatorActive: {
-        color: '#713dec'
+        color: '#713dec',
+        backgroundColor: '#713dec',
+        borderWidth: 0
     },
 
     /**
@@ -49,7 +55,13 @@ const PAGED_LIST_STYLES = {
         alignItems: 'center',
         backgroundColor: ColorPalette.blue,
         flexDirection: 'row',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        borderRadius: 100,
+        position: 'absolute',
+        margin: 0,
+        bottom: 10,
+        left: 10,
+        right: 10
     },
 
     pageIndicatorContent: {
@@ -62,7 +74,7 @@ const PAGED_LIST_STYLES = {
      * Icon of the page indicator (Android).
      */
     pageIndicatorIcon: {
-        color: ColorPalette.blueHighlight,
+        color: '#fff',
         fontSize: 30
     },
 
@@ -195,8 +207,8 @@ const SECTION_LIST_STYLES = {
     },
 
     pullToRefreshText: {
-        backgroundColor: 'transparent',
-        color: OVERLAY_FONT_COLOR
+        color: OVERLAY_FONT_COLOR,
+        fontWeight: '600'
     },
 
     secondaryActionContainer: {
