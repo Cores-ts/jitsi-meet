@@ -1,0 +1,9 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [{
+            "paths": ["NOT /static/*", "*"],
+            "appID": "F82R864PVJ.com.fundingbox.meetings"
+        }]
+    }
+}

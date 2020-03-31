@@ -43,7 +43,7 @@
     JitsiMeet *jitsiMeet = [JitsiMeet sharedInstance];
 
     jitsiMeet.conferenceActivityType = JitsiMeetConferenceActivityType;
-    jitsiMeet.customUrlScheme = @"org.jitsi.meet";
+    jitsiMeet.customUrlScheme = @"com.fundingbox.meetings";
     jitsiMeet.universalLinkDomains = @[@"meetings.fundingbox.com", @"alpha.meetings.fundingbox.com", @"beta.meetings.fundingbox.com"];
 
     jitsiMeet.defaultConferenceOptions = [JitsiMeetConferenceOptions fromBuilder:^(JitsiMeetConferenceOptionsBuilder *builder) {

@@ -4,8 +4,6 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:alpha.meetings.fundingbox.com</string>
-		<string>applinks:beta.meetings.fundingbox.com</string>
 		<string>applinks:meetings.fundingbox.com</string>
 	</array>
 	<key>com.apple.developer.siri</key>

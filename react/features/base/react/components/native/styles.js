@@ -193,18 +193,23 @@ const SECTION_LIST_STYLES = {
 
     listSection: {
         alignItems: 'center',
-        backgroundColor: 'transparent',
-        flex: 1,
+        backgroundColor: '#000',
+        flex: 0,
         flexDirection: 'row',
         paddingVertical: 5,
-        paddingHorizontal: 10
+        paddingHorizontal: 20,
+        marginTop: 40,
+        marginBottom: 10,
+        marginHorizontal: 10,
+        width: 'auto',
+        borderRadius: 20,
+        alignSelf: 'flex-start'
     },
 
     listSectionText: {
         color: '#fff',
-        fontSize: 24,
-        fontWeight: '800',
-        marginTop: 40
+        fontSize: 18,
+        fontWeight: '800'
     },
 
     pullToRefresh: {
