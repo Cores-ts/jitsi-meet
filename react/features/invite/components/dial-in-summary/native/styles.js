@@ -7,9 +7,16 @@ const panelHeight = Dimensions.get('window').height - 125;
 
 export const INDICATOR_COLOR = ColorPalette.lightGrey;
 
+const WV_BACKGROUND = 'rgb(71, 71, 71)';
+
 export default {
 
-    bar: { 
+    bar: {
+        backgroundColor: WV_BACKGROUND
+    },
+
+    backDrop: {
+        backgroundColor: WV_BACKGROUND
     },
 
     indicatorWrapper: {

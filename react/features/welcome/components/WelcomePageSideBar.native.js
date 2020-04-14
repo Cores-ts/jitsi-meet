@@ -8,7 +8,8 @@ import {
 } from 'react-native';
 
 import { Avatar } from '../../base/avatar';
-import { IconInfo, IconSettings } from '../../base/icons';
+import { IconInfo, IconSettings, IconHelp } from '../../base/icons';
+import { setActiveModalId } from '../../base/modal';
 import {
     getLocalParticipant,
     getParticipantDisplayName
@@ -18,7 +19,8 @@ import {
     SlidingView
 } from '../../base/react';
 import { connect } from '../../base/redux';
-import { setSettingsViewVisible } from '../../settings';
+import { HELP_VIEW_MODAL_ID } from '../../help';
+import { SETTINGS_VIEW_ID } from '../../settings';
 
 import { setSideBarVisible } from '../actions';
 import SideBarItem from './SideBarItem';
@@ -34,11 +36,6 @@ import jitsiLocalStorage from '../../../../modules/util/JitsiLocalStorage';
  * The URL at which the privacy policy is available to the user.
  */
 const PRIVACY_URL = 'https://jitsi.org/meet/privacy';
-
-/**
- * The URL at which the user may send feedback.
- */
-const SEND_FEEDBACK_URL = 'mailto:support@jitsi.org';
 
 /**
  * The URL at which the terms (of service/use) are available to the user.
@@ -82,6 +79,7 @@ class WelcomePageSideBar extends Component<Props> {
 
         // Bind event handlers so they are only bound once per instance.
         this._onHideSideBar = this._onHideSideBar.bind(this);
+        this._onOpenHelpPage = this._onOpenHelpPage.bind(this);
         this._onOpenSettings = this._onOpenSettings.bind(this);
         this._onSignIn = this._onSignIn.bind(this);
     }
@@ -121,7 +119,11 @@ class WelcomePageSideBar extends Component<Props> {
                         <SideBarItem
                             icon = { IconInfo }
                             label = 'welcomepage.privacy'
-                            url={ PRIVACY_URL } />
+                            url={PRIVACY_URL} />
+                        <SideBarItem
+                            icon = { IconHelp }
+                            label = 'welcomepage.getHelp'
+                            onPress = { this._onOpenHelpPage } />
                         <SideBarItem
                             icon = { IconSettings }
                             label = 'Sign in'
@@ -144,6 +146,20 @@ class WelcomePageSideBar extends Component<Props> {
         this.props.dispatch(setSideBarVisible(false));
     }
 
+    _onOpenHelpPage: () => void;
+
+    /**
+     * Shows the {@link HelpView}.
+     *
+     * @returns {void}
+     */
+    _onOpenHelpPage() {
+        const { dispatch } = this.props;
+
+        dispatch(setSideBarVisible(false));
+        dispatch(setActiveModalId(HELP_VIEW_MODAL_ID));
+    }
+
     _onOpenSettings: () => void;
 
     /**
@@ -156,7 +172,7 @@ class WelcomePageSideBar extends Component<Props> {
         const { dispatch } = this.props;
 
         dispatch(setSideBarVisible(false));
-        dispatch(setSettingsViewVisible(true));
+        dispatch(setActiveModalId(SETTINGS_VIEW_ID));
     }
 
     _onSignIn: () => void;

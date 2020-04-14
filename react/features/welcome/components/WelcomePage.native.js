@@ -22,6 +22,7 @@ import {
     createDesiredLocalTracks,
     destroyLocalTracks
 } from '../../base/tracks';
+import { HelpView } from '../../help';
 import { DialInSummary } from '../../invite';
 import { SettingsView } from '../../settings';
 
@@ -76,6 +77,9 @@ class WelcomePage extends AbstractWelcomePage {
     componentDidMount() {
         super.componentDidMount();
         this.openPanel();
+
+        this._updateRoomname();
+
         const { dispatch } = this.props;
 
         if (this.props._settings.startAudioOnly) {
@@ -239,18 +243,12 @@ class WelcomePage extends AbstractWelcomePage {
             );
         }
 
-        const buttonDisabled = this._isJoinDisabled();
-
         return (
             <TouchableHighlight
                 accessibilityLabel =
                     { t('welcomepage.accessibilityLabel.join') }
-                disabled = { buttonDisabled }
                 onPress = { this._onJoin }
-                style = { [
-                    styles.button,
-                    buttonDisabled ? styles.buttonDisabled : null
-                ] }
+                style = { styles.button }
                 underlayColor = { ColorPalette.white }>
                 { children }
             </TouchableHighlight>
@@ -290,9 +288,7 @@ class WelcomePage extends AbstractWelcomePage {
                                 onFocus = { this._onFieldFocus }
                                 onSubmitEditing = { this._onJoin }
                                 placeholder = { t('welcomepage.roomname') }
-                                placeholderTextColor = {
-                                    PLACEHOLDER_TEXT_COLOR
-                                }
+                                placeholderTextColor = { PLACEHOLDER_TEXT_COLOR }
                                 returnKeyType = { 'go' }
                                 style = { styles.textInput }
                                 underlineColorAndroid = 'transparent'
@@ -305,10 +301,10 @@ class WelcomePage extends AbstractWelcomePage {
                     <WelcomePageLists disabled = { this.state._fieldFocused } />
                     <SettingsView />
                     <DialInSummary />
-                    
                 </View>
                 <WelcomePageSideBar />
-                
+
+                { this._renderWelcomePageModals() }
             </LocalVideoTrackUnderlay>
         );
     }
@@ -328,6 +324,18 @@ class WelcomePage extends AbstractWelcomePage {
                 </Text>
             </View>
         );
+    }
+
+    /**
+     * Renders JitsiModals that are supposed to be on the welcome page.
+     *
+     * @returns {Array<ReactElement>}
+     */
+    _renderWelcomePageModals() {
+        return [
+            <HelpView key = 'helpView' />,
+            <SettingsView key = 'settings' />
+        ];
     }
 }
 

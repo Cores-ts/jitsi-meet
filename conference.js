@@ -471,6 +471,11 @@ export default {
     localVideo: null,
 
     /**
+     * The key used for End-To-End Encryption.
+     */
+    e2eeKey: undefined,
+
+    /**
      * Creates local media tracks and connects to a room. Will show error
      * dialogs in case accessing the local microphone and/or camera failed. Will
      * show guidance overlay for users on how to give access to camera and/or
@@ -644,6 +649,8 @@ export default {
      */
     init(options) {
         this.roomName = options.roomName;
+
+        window.addEventListener('hashchange', this.onHashChange.bind(this), false);
 
         return (
 
@@ -1178,6 +1185,31 @@ export default {
     },
 
     /**
+     * Handled location hash change events.
+     */
+    onHashChange() {
+        const items = {};
+        const parts = window.location.hash.substr(1).split('&');
+
+        for (const part of parts) {
+            const param = part.split('=');
+            const key = param[0];
+
+            if (!key) {
+                continue; // eslint-disable-line no-continue
+            }
+
+            items[key] = param[1];
+        }
+
+        this.e2eeKey = items.e2eekey;
+
+        logger.debug(`New E2EE key: ${this.e2eeKey}`);
+
+        this._room.setE2EEKey(this.e2eeKey);
+    },
+
+    /**
      * Exposes a Command(s) API on this instance. It is necessitated by (1) the
      * desire to keep room private to this instance and (2) the need of other
      * modules to send and receive commands to and from participants.
@@ -1287,6 +1319,13 @@ export default {
         options.getWiFiStatsMethod = this._getWiFiStatsMethod;
         options.confID = `${locationURL.host}${locationURL.pathname}`;
         options.createVADProcessor = createRnnoiseProcessorPromise;
+
+        // Disable CallStats, if requessted.
+        if (options.disableThirdPartyRequests) {
+            delete options.callStatsID;
+            delete options.callStatsSecret;
+            delete options.getWiFiStatsMethod;
+        }
 
         return options;
     },
