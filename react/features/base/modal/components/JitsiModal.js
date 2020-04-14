@@ -101,8 +101,7 @@ class JitsiModal extends PureComponent<Props> {
      */
     render() {
         const { _headerStyles, _show, _styles, children, footerComponent, headerProps, position, style, swipeable = false } = this.props;
-        console.log("modal", swipeable)
-        
+
         if (swipeable) {
             return (
                 <SwipeablePanel

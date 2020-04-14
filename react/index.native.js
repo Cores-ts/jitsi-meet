@@ -19,6 +19,28 @@ import { IncomingCallApp } from './features/mobile/incoming-call';
 // It's crucial that the native loggers are created ASAP, not to lose any data.
 import { _initLogging } from './features/base/logging/functions';
 
+import { Text, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+    defaultText: {
+        fontFamily: 'Avenir'
+    }
+});
+
+export const typography = () => {
+    const oldTextRender = Text.render;
+
+    Text.render = function (...args) {
+        const origin = oldTextRender.call(this, ...args);
+
+        return React.cloneElement(origin, {
+            style: [styles.defaultText, origin.props.style],
+        });
+    };
+};
+
+typography();
+
 declare var __DEV__;
 
 /**
@@ -75,7 +97,6 @@ if (!__DEV__) {
 
     /* eslint-enable */
 }
-
 
 // Register the main/root Component of JitsiMeetView.
 AppRegistry.registerComponent('App', () => Root);

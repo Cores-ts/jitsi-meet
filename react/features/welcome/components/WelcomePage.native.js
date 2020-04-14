@@ -76,7 +76,6 @@ class WelcomePage extends AbstractWelcomePage {
      */
     componentDidMount() {
         super.componentDidMount();
-        this.openPanel();
 
         this._updateRoomname();
 
@@ -94,18 +93,6 @@ class WelcomePage extends AbstractWelcomePage {
             });
         }
     }
-
-    openPanel = () => {
-        this.setState({
-            swipeablePanelActive: true
-        });
-    };
-
-    closePanel = () => {
-        this.setState({
-            swipeablePanelActive: false
-        });
-    };
 
     /**
      * Implements React's {@link Component#render()}. Renders a prompt for

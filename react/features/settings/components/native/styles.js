@@ -81,7 +81,7 @@ export default {
     },
 
     formSectionTitleText: {
-        color: '#ffffff60',
+        color: '#d8d2cb',
         fontSize: 18,
         fontWeight: '900'
     },
@@ -95,14 +95,14 @@ export default {
      * Global {@code Text} color for the components.
      */
     text: {
-        color: ColorPalette.white
+        color: '#d8d2cb'
     },
 
     /**
      * Standard text input field style.
      */
     textInputField: {
-        color: '#ffffff60',
+        color: '#d8d2cb',
         flex: 1,
         fontSize: TEXT_SIZE,
         textAlign: 'right',

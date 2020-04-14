@@ -16,7 +16,6 @@ import { getDialInfoPageURLForURIString } from '../../../functions';
 
 import DialInSummaryErrorDialog from './DialInSummaryErrorDialog';
 import styles, { INDICATOR_COLOR } from './styles';
-import SwipeablePanel from 'rn-swipeable-panel';
 
 type Props = {
 

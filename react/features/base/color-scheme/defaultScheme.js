@@ -9,7 +9,7 @@ export default {
     '_defaultTheme': {
         // Generic app theme colors that are used accross the entire app.
         // All scheme definitions below inherit these values.
-        background: 'rgb(255, 255, 255)',
+        background: 'rgb(26, 30, 33)',
         errorText: ColorPalette.red,
         icon: 'rgb(28, 32, 37)',
         text: 'rgb(28, 32, 37)'

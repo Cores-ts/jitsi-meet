@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20
     },
     inputLabel3: {
-        color: '#fff',
+        color: '#d8d2cb',
         fontSize: 22,
         fontWeight: '800',
         textAlign: 'center'

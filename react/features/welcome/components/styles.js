@@ -17,7 +17,7 @@ export const SWITCH_UNDER_COLOR = 'rgba(0, 0, 0, 0)';
 /**
  * The default color of text on the WelcomePage.
  */
-const TEXT_COLOR = ColorPalette.white;
+const TEXT_COLOR = '#d8d2cb';
 
 /**
  * The styles of the React {@code Components} of the feature welcome including
@@ -69,7 +69,7 @@ export default {
      */
     buttonText: {
         alignSelf: 'center',
-        color: ColorPalette.white,
+        color: '#d8d2cb',
         fontSize: 14
     },
 
@@ -77,7 +77,7 @@ export default {
      * The style of the display name label in the side bar.
      */
     displayName: {
-        color: ColorPalette.white,
+        color: '#d8d2cb',
         fontSize: 16,
         marginTop: BoxModel.margin,
         textAlign: 'center'
@@ -235,7 +235,7 @@ export default {
      * The icon in the side bar item touchables.
      */
     sideBarItemIcon: {
-        color: '#fff',
+        color: '#d8d2cb',
         fontSize: 20,
         marginRight: 15
     },
@@ -244,7 +244,7 @@ export default {
      * The label of the side bar item touchables.
      */
     sideBarItemText: {
-        color: '#fff',
+        color: '#d8d2cb',
         fontWeight: 'bold'
     },
 

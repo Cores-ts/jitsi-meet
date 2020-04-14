@@ -31,30 +31,14 @@ const PAGED_LIST_STYLES = {
         justifyContent: 'center',
         padding: BoxModel.padding / 2,
         backgroundColor: 'transparent',
-        borderRadius: 10,
-        width: 45,
-        height: 45,
-        marginTop: 10,
-        marginBottom: 10,
-        borderWidth: 0,
-        borderColor: '#fff'
+        paddingVertical: 15
     },
 
     /**
      * Additional style for the active indicator icon (Android).
      */
     pageIndicatorActive: {
-        backgroundColor: '#713dec'
-    },
-
-    /**
-     * Additional style for the active indicator icon (Android).
-     */
-    pageIndicatorPlus: {
-        backgroundColor: '#713dec',
-        width: 80,
-        height: 80,
-        borderRadius: 50
+        color: '#fff'
     },
 
     /**
@@ -65,13 +49,7 @@ const PAGED_LIST_STYLES = {
         backgroundColor: ColorPalette.blue,
         flexDirection: 'row',
         justifyContent: 'space-around',
-        borderRadius: 100,
-        position: 'absolute',
-        margin: 0,
-        bottom: 20,
-        left: 10,
-        right: 10,
-        height: 60
+      
     },
 
     pageIndicatorContent: {
@@ -85,15 +63,18 @@ const PAGED_LIST_STYLES = {
      */
     pageIndicatorIcon: {
         color: '#fff',
-        fontSize: 30
+        fontSize: 30,
+        display: 'none'
     },
 
     /**
      * Label of the page indicator (Android).
      */
     pageIndicatorText: {
-        color: ColorPalette.blueHighlight,
-        display: 'none'
+        color: '#555c61',
+        fontSize: 17,
+        fontFamily: 'Avenir',
+        fontWeight: '800'
     },
 
     /**
@@ -186,7 +167,7 @@ const SECTION_LIST_STYLES = {
     },
 
     listItemTitle: {
-        color: '#fff',
+        color: '#d8d2cb',
         fontWeight: '700',
         fontSize: 16
     },
@@ -207,7 +188,7 @@ const SECTION_LIST_STYLES = {
     },
 
     listSectionText: {
-        color: '#fff',
+        color: '#d8d2cb',
         fontSize: 18,
         fontWeight: '800'
     },

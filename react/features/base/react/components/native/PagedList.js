@@ -259,7 +259,7 @@ class PagedList extends Component<Props, State> {
                         src = { page.icon }
                         style = { styles.pageIndicatorIcon } />
                     <Text
-                        style = { styles.pageIndicatorText }>
+                        style = { [ styles.pageIndicatorText, this._getIndicatorStyle(index) ] }>
                         { page.title }
                     </Text>
                 </View>

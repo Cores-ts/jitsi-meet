@@ -81,11 +81,6 @@ class WelcomePageLists extends Component<Props> {
                 title: t('welcomepage.recentList')
             }
         ];
-        
-        pages.push({
-            component: CalendarList,
-            icon: IconAdd
-        });
 
         if (_calendarEnabled) {
             pages.push(
