@@ -209,7 +209,6 @@ class PasswordRequiredPrompt extends Component<Props, State> {
     }
 
     _onFulfill(code: ? string) {
-        console.log("LOCK", code);
          const { conference }: { conference: { join: Function } } = this.props;
 
         this.props.dispatch(setPassword(conference, conference.join, code));

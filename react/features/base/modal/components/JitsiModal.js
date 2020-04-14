@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react';
-import { KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import { KeyboardAvoidingView, SafeAreaView, View } from 'react-native';
 
 import { ColorSchemeRegistry } from '../../color-scheme';
 import { HeaderWithNavigation, SlidingView } from '../../react';
@@ -9,6 +9,7 @@ import { connect } from '../../redux';
 import { StyleType } from '../../styles';
 
 import { setActiveModalId } from '../actions';
+import SwipeablePanel from 'rn-swipeable-panel';
 
 import styles from './styles';
 
@@ -99,7 +100,25 @@ class JitsiModal extends PureComponent<Props> {
      * @inheritdoc
      */
     render() {
-        const { _headerStyles, _show, _styles, children, footerComponent, headerProps, position, style } = this.props;
+        const { _headerStyles, _show, _styles, children, footerComponent, headerProps, position, style, swipeable = false } = this.props;
+        console.log("modal", swipeable)
+        
+        if (swipeable) {
+            return (
+                <SwipeablePanel
+                    { ...swipeable }
+                    isActive = { _show }
+                    onClose = { this._onRequestClose }
+                    onPressCloseButton = { this._onRequestClose }>
+                    <KeyboardAvoidingView
+                        behavior = 'padding'>
+                        <SafeAreaView style = { style }>
+                            { children }
+                        </SafeAreaView>
+                    </KeyboardAvoidingView>
+                </SwipeablePanel>
+            );
+        }
 
         return (
             <SlidingView

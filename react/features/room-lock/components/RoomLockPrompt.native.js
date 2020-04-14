@@ -189,7 +189,6 @@ class RoomLockPrompt extends Component<Props> {
     }
 
     _onFulfill(code) {
-        console.log("LOCK", code);
          this.props.dispatch(endRoomLockRequest(this.props.conference, code));
 
         this.refs.codeInputRef.clear();
@@ -223,7 +222,6 @@ class RoomLockPrompt extends Component<Props> {
      * after setting the password is resolved.
      */
     _onSubmit(value: ?string) {
-        console.log("LOCK",value)
         this.props.dispatch(endRoomLockRequest(this.props.conference, value));
 
         return false; // Do not hide.
