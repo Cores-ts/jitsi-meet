@@ -170,6 +170,9 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                             value = { startWithVideoMuted } />
                     </FormRow>
                     <FormSectionHeader
+                        label = 'settingsView.advanced' />
+                    {this._renderAdvancedSettings()}
+                    <FormSectionHeader
                         label = 'settingsView.buildInfoSection' />
                     <FormRow
                         label = 'settingsView.version'>
@@ -177,9 +180,6 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                             { `${AppInfo.version} build ${AppInfo.buildNumber}` }
                         </Text>
                     </FormRow>
-                    <FormSectionHeader
-                        label = 'settingsView.advanced' />
-                    { this._renderAdvancedSettings() }
                 </ScrollView>
             </JitsiModal>
         );
