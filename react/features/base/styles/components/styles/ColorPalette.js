@@ -25,7 +25,7 @@ export const ColorPalette = {
     darkGrey: '#555555',
     green: '#40b183',
     lightGrey: '#AAAAAA',
-    overflowMenuItemUnderlay: '#EEEEEE',
+    overflowMenuItemUnderlay: 'blue',
     red: '#D00000',
     transparent: 'rgba(0, 0, 0, 0)',
     warning: 'rgb(215, 121, 118)',

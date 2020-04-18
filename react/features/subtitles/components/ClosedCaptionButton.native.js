@@ -1,6 +1,6 @@
 // @flow
 
-import { getFeatureFlag, CLOSE_CAPTIONS_ENABLED } from '../../base/flags';
+import { CLOSE_CAPTIONS_ENABLED, getFeatureFlag } from '../../base/flags';
 import { translate } from '../../base/i18n';
 import { IconClosedCaption } from '../../base/icons';
 import { connect } from '../../base/redux';
@@ -32,7 +32,7 @@ class ClosedCaptionButton
  */
 export function mapStateToProps(state: Object, ownProps: Object) {
     const { transcribingEnabled } = state['features/base/config'];
-    const enabled = getFeatureFlag(state, CLOSE_CAPTIONS_ENABLED, true) && transcribingEnabled;
+    const enabled = getFeatureFlag(state, CLOSE_CAPTIONS_ENABLED, true) && Boolean(transcribingEnabled);
     const { visible = enabled } = ownProps;
 
     return {

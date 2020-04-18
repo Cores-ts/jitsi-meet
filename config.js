@@ -198,7 +198,7 @@ var config = {
 
     // Transcription (in interface_config,
     // subtitles and buttons can be configured)
-    // transcribingEnabled: false,
+    transcribingEnabled: false,
 
     // Enables automatic turning on captions when recording is started
     // autoCaptionOnRecord: false,
@@ -206,7 +206,7 @@ var config = {
     // Misc
 
     // Default value for the channel "last N" attribute. -1 for unlimited.
-    channelLastN: -1,
+    channelLastN: 5,
 
     // Disables or enables RTX (RFC 4588) (defaults to false).
     // disableRtx: false,
@@ -523,6 +523,7 @@ var config = {
 
     // Allow all above example options to include a trailing comma and
     // prevent fear when commenting out the last value.
+    enableLipSync: false,
     makeJsonParserHappy: 'even if last key had a trailing comma'
 
     // no configuration value should follow this line.
