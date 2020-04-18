@@ -157,7 +157,7 @@ class RoomLockPrompt extends Component<Props> {
             <CodeInput
                 ref="codeInputRef"
                 //secureTextEntry
-                //keyboardType="number-pad"
+                keyboardType="number-pad"
                 codeLength={textInputProps.codeLength}
                 keyboardType={textInputProps.keyboardType}
                 className = 'border-box'
