@@ -124,10 +124,6 @@ class WelcomePageSideBar extends Component<Props> {
                             icon = { IconHelp }
                             label = 'welcomepage.getHelp'
                             onPress = { this._onOpenHelpPage } />
-                        <SideBarItem
-                            icon = { IconSettings }
-                            label = 'Sign in'
-                            onPress = { this._onSignIn } />
                     </ScrollView>
                 </SafeAreaView>
             </SlidingView>
