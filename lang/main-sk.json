@@ -29,7 +29,7 @@
     },
     "calendarSync": {
         "addMeetingURL": "Pridať odkaz na stretnutie",
-        "confirmAddLink": "Chcete pridal Jitsi odkaz do tejto udalosti?",
+        "confirmAddLink": "Chcete pridal Fundingbox Meetings odkaz do tejto udalosti?",
         "error": {
             "appConfiguration": "Integrácia s kalendárom nie je správne nastavená.",
             "generic": "Stala sa chyba. Skontrolujte si nastavenia kalendáru a skúste aktualizovať kalendár. ",

@@ -28,7 +28,7 @@
     },
     "calendarSync": {
         "addMeetingURL": "Een link naar de vergadering toevoegen",
-        "confirmAddLink": "Wilt u een Jitsi-link aan deze gebeurtenis toevoegen?",
+        "confirmAddLink": "Wilt u een Fundingbox Meetings-link aan deze gebeurtenis toevoegen?",
         "error": {
             "appConfiguration": "De agenda-integratie is niet juist ingesteld.",
             "generic": "Er is een fout opgetreden. Controleer de agenda-instellingen of vernieuw de agenda.",
