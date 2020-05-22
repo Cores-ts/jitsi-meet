@@ -3,7 +3,7 @@
 /**
  * Style variables
  */
-$baseFontFamily: -apple-system, BlinkMacSystemFont, 'open_sanslight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$baseFontFamily: "Avenir", -apple-system, BlinkMacSystemFont, 'open_sanslight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $hangupColor: #bf2117;
 $hangupFontSize: 2em;
 
@@ -19,7 +19,6 @@ $thumbnailVideoMargin: 2px;
 $thumbnailsBorder: 2px;
 $thumbnailVideoBorder: 2px;
 $filmstripToggleButtonWidth: 17px;
-
 
 /**
  * Color variables.
@@ -128,7 +127,6 @@ $dropdownZ: 901;
 $centeredVideoLabelZ: 1010;
 $popoverZ: 1015;
 $overlayZ: 1016;
-
 
 /**
  * Font Colors
@@ -270,4 +268,3 @@ $chromeExtensionBannerTop: 80px;
 $chromeExtensionBannerRight: 16px;
 $chromeExtensionBannerTopInMeeting: 10px;
 $chromeExtensionBannerRightInMeeeting: 10px;
-

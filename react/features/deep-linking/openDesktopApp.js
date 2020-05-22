@@ -8,5 +8,12 @@
  * with false otherwise.
  */
 export function _openDesktopApp(state: Object) { // eslint-disable-line no-unused-vars
-    return Promise.resolve(false);
+    console.log("OPENDESKTOPAPP2",state)
+    const { launchInWeb } = state['features/deep-linking'];
+
+    if (!launchInWeb) {
+         window.location = "com.fundingbox.meetings://" + state['features/base/conference'].room
+    }
+    
+    return Promise.resolve(!launchInWeb);
 }

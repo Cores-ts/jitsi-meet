@@ -20,6 +20,11 @@ export const ADD_PREJOIN_CONTENT_SHARING_TRACK
 export const PREJOIN_START_CONFERENCE = 'PREJOIN_START_CONFERENCE';
 
 /**
+ * Action type to signal the start of the conference.
+ */
+export const PREJOIN_START_DESKTOP_CONFERENCE = 'PREJOIN_START_DESKTOP_CONFERENCE';
+
+/**
  * Action type to set the status of the device.
  */
 export const SET_DEVICE_STATUS = 'SET_DEVICE_STATUS';
