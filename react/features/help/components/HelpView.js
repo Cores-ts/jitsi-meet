@@ -5,7 +5,6 @@ import WebView from 'react-native-webview';
 
 import { JitsiModal } from '../../base/modal';
 import { connect } from '../../base/redux';
-
 import { HELP_VIEW_MODAL_ID } from '../constants';
 
 const DEFAULT_HELP_CENTRE_URL = 'https://fundingbox-spaces.s3-eu-central-1.amazonaws.com/uploads/5737006bcb8bfea77c5f2012/8Qxdadng5q/faq.html';

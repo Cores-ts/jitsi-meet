@@ -12,7 +12,6 @@ import {
 } from 'react-native';
 
 import { connect } from '../../base/redux';
-
 import { endRoomLockRequest } from '../actions';
 import CodeInput from 'react-native-confirmation-code-input';
 import { ColorPalette } from '../../base/styles';

@@ -7,7 +7,6 @@ import { ColorSchemeRegistry } from '../../color-scheme';
 import { HeaderWithNavigation, SlidingView } from '../../react';
 import { connect } from '../../redux';
 import { StyleType } from '../../styles';
-
 import { setActiveModalId } from '../actions';
 import SwipeablePanel from 'rn-swipeable-panel';
 
@@ -125,7 +124,7 @@ class JitsiModal extends PureComponent<Props> {
                 position = { position }
                 show = { _show }>
                 <KeyboardAvoidingView
-                    behavior = 'padding'
+                    behavior = 'height'
                     style = { [
                         _headerStyles.page,
                         _styles.page,

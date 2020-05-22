@@ -35,7 +35,7 @@
             "generic": "",
             "notSignedIn": ""
         },
-        "join": "Ta del",
+        "join": "",
         "joinTooltip": "Ta del i møtet",
         "nextMeeting": "neste møte",
         "noEvents": "",
@@ -55,9 +55,6 @@
         "title": "",
         "messageTo": "Privat melding til {{recipient}}",
         "fieldPlaceHolder": "Skriv inn din melding her"
-    },
-    "connectingOverlay": {
-        "joiningRoom": ""
     },
     "connection": {
         "ATTACHED": "Vedlagt",
@@ -110,14 +107,8 @@
         "yesterday": "I går"
     },
     "deepLinking": {
-        "appNotInstalled": "",
-        "description": "",
-        "descriptionWithoutWeb": "",
         "downloadApp": "Last ned programmet",
-        "launchWebButton": "",
         "openApp": "Fortsett til programmet",
-        "title": "",
-        "tryAgainButton": ""
     },
     "defaultLink": "f.eks.",
     "deviceError": {
@@ -677,9 +668,6 @@
         "lowDefinition": "",
         "onlyAudioAvailable": "",
         "onlyAudioSupported": "",
-        "p2pEnabled": "",
-        "p2pVideoQualityDescription": "",
-        "recHighDefinitionOnly": "",
         "sd": "",
         "standardDefinition": ""
     },
