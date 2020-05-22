@@ -10,8 +10,10 @@ import { connect } from '../../base/redux';
 import { getDisplayName, updateSettings } from '../../base/settings';
 import { isGuest } from '../../invite';
 import { VideoSettingsButton, AudioSettingsButton } from '../../toolbox';
+
 import {
     joinConference as joinConferenceAction,
+    joinDesktopConference as joinDesktopConference,
     joinConferenceWithoutAudio as joinConferenceWithoutAudioAction,
     setSkipPrejoin as setSkipPrejoinAction,
     setJoinByPhoneDialogVisiblity as setJoinByPhoneDialogVisiblityAction
@@ -28,7 +30,6 @@ import CopyMeetingUrl from './preview/CopyMeetingUrl';
 import DeviceStatus from './preview/DeviceStatus';
 import ParticipantName from './preview/ParticipantName';
 import Preview from './preview/Preview';
-
 
 type Props = {
 
@@ -51,6 +52,11 @@ type Props = {
      * Joins the current meeting.
      */
     joinConference: Function,
+
+    /**
+     * Joins the current meeting using the Desktop App.
+     */
+    joinDesktopConference: Function,
 
     /**
      * Joins the current meeting without audio.
@@ -215,6 +221,7 @@ class Prejoin extends Component<Props, State> {
             hasJoinByPhoneButton,
             isAnonymousUser,
             joinConference,
+            joinDesktopConference,
             joinConferenceWithoutAudio,
             name,
             showDialog,
@@ -273,6 +280,14 @@ class Prejoin extends Component<Props, State> {
                                     type = 'primary'>
                                     { t('prejoin.joinMeeting') }
                                 </ActionButton>
+                                <ActionButton
+                                    disabled = { !name }
+                                    hasOptions = { true }
+                                    onClick = { joinDesktopConference }
+                                    onOptionsClick = { _onOptionsClick }
+                                    type = 'primary'>
+                                    { "Join via Meetings for Desktop" }
+                                </ActionButton>
                             </InlineDialog>
                         </div>
 
@@ -321,6 +336,7 @@ function mapStateToProps(state): Object {
 
 const mapDispatchToProps = {
     joinConferenceWithoutAudio: joinConferenceWithoutAudioAction,
+    joinDesktopConference: joinDesktopConference,
     joinConference: joinConferenceAction,
     setJoinByPhoneDialogVisiblity: setJoinByPhoneDialogVisiblityAction,
     setSkipPrejoin: setSkipPrejoinAction,
