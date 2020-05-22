@@ -73,7 +73,6 @@ export function getDeepLinkingPage(state) {
         return Promise.resolve();
     }
 
-    console.log("LLEGOHASTAAQUI",state)
     return _openDesktopApp(state).then(
         // eslint-disable-next-line no-confusing-arrow
         result => result ? DeepLinkingDesktopPage : undefined);

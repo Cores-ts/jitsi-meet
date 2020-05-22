@@ -14,7 +14,6 @@ import {
     ADD_PREJOIN_CONTENT_SHARING_TRACK,
     ADD_PREJOIN_VIDEO_TRACK,
     PREJOIN_START_CONFERENCE,
-    PREJOIN_START_DESKTOP_CONFERENCE,
     SET_DEVICE_STATUS,
     SET_DIALOUT_COUNTRY,
     SET_DIALOUT_NUMBER,
@@ -170,6 +169,7 @@ function pollForStatus(
     };
 }
 
+
 /**
  * Action used for joining the meeting with phone audio.
  * A dial out connection is tried and a polling mechanism is used for getting the status.
@@ -265,19 +265,6 @@ export function joinConference() {
     return function(dispatch: Function) {
         dispatch(setPrejoinPageVisibility(false));
         dispatch(startConference());
-    };
-}
-
-/**
- * Joins the conference using the desktop app.
- *
- * @returns {Function}
- */
-export function joinDesktopConference() {
-    return function (dispatch: Function) {
-        dispatch(setPrejoinPageVisibility(false));
-        dispatch(startDesktopConference());
-
     };
 }
 
@@ -382,6 +369,7 @@ export function replaceVideoTrackById(deviceId: Object) {
     };
 }
 
+
 /**
  * Action used to mark audio muted.
  *
@@ -407,6 +395,7 @@ export function setPrejoinVideoDisabled(value: boolean) {
         value
     };
 }
+
 
 /**
  * Action used to mark video muted.
@@ -563,16 +552,5 @@ export function setPrejoinPageVisibility(value: boolean) {
 function startConference() {
     return {
         type: PREJOIN_START_CONFERENCE
-    };
-}
-
-/**
- * Action used to join a conference via the desktop app.
- *
- * @returns {Object}
- */
-function startDesktopConference() {
-    return {
-        type: PREJOIN_START_DESKTOP_CONFERENCE
     };
 }
