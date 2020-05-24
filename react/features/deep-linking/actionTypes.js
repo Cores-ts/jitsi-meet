@@ -5,7 +5,7 @@
  * app.
  *
  * {
- *     type: OPEN_DESKTOP_APP
+ *     type: OPEN_DESKTOP
  * }
  */
 export const OPEN_DESKTOP_APP = 'OPEN_DESKTOP_APP';

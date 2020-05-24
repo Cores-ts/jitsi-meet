@@ -8,7 +8,7 @@ $baseLight: #FFFFFF;
 */
 $controlBackground: $baseLight;
 $controlColor: #333333;
-$sliderTrackBackground: #474747;
+$sliderTrackBackground: #1b1820;
 $sliderThumbBackground: #3572b0;
 
 /**
@@ -40,7 +40,7 @@ $overlayButtonBg: #0074E0;
 /**
 * Color variables
 **/
-$defaultBackground: #474747;
+$defaultBackground: #1b1820;
 $filmstripOnlyOverlayBg: #000;
 $reloadProgressBarBg: #0074E0;
 
@@ -61,7 +61,7 @@ $inlayColorBg: lighten($defaultBackground, 20%);
 $inlayBorderColor: lighten($baseLight, 10%);
 $inlayIconBg: #000;
 $inlayIconColor: #fff;
-$inlayFilmstripOnlyColor: #474747;
+$inlayFilmstripOnlyColor: #1b1820;
 $inlayFilmstripOnlyBg: #fff;
 
 // Main controls
@@ -98,7 +98,6 @@ $toolbarButtonColor: #FFFFFF;
 $toolbarSelectBackground: rgba(0, 0, 0, .6);
 $toolbarTitleColor: #FFFFFF;
 $toolbarToggleBackground: #12499C;
-
 
 /**
  * Forms

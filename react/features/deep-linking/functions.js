@@ -22,8 +22,8 @@ export function generateDeepLinkingURL() {
     // like to open the current URL in the mobile app. The only way to do it
     // appears to be a link with an app-specific scheme, not a Universal
     // Link.
-
-    const appScheme = interfaceConfig.APP_SCHEME || 'org.jitsi.meet';
+    console.log("generateDeepLinkingURL")
+    const appScheme = interfaceConfig.APP_SCHEME || 'com.fundingbox.meetings';
     const { href } = window.location;
     const regex = new RegExp(URI_PROTOCOL_PATTERN, 'gi');
 
@@ -32,7 +32,7 @@ export function generateDeepLinkingURL() {
     if (Platform.OS === 'android') {
         // https://meetings.fundingbox.com/foo -> meetings.fundingbox.com/foo
         const url = href.replace(regex, '').substr(2);
-        const pkg = interfaceConfig.ANDROID_APP_PACKAGE || 'org.jitsi.meet';
+        const pkg = interfaceConfig.ANDROID_APP_PACKAGE || 'com.fundingbox.meetings';
 
         return `intent://${url}#Intent;scheme=${appScheme};package=${pkg};end`;
     }
@@ -73,7 +73,6 @@ export function getDeepLinkingPage(state) {
         return Promise.resolve();
     }
 
-    console.log("LLEGOHASTAAQUI",state)
     return _openDesktopApp(state).then(
         // eslint-disable-next-line no-confusing-arrow
         result => result ? DeepLinkingDesktopPage : undefined);

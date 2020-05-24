@@ -120,7 +120,7 @@
     },
     "deepLinking": {
         "appNotInstalled": "Necesitas la aplicación móvil de {{app}} para unirte a esta reunión en el teléfono.",
-        "description": "¿No pasó nada? Hemos intentado iniciar su reunión en la aplicación {{app}} de escritorio. intente de nuevo o inicie en la aplicación {{app}} vía web.",
+        "description": "¿No pasó nada? Hemos intentado iniciar su reunión en la aplicación {{app}} de escritorio. Inténtelo de nuevo o inicie en la aplicación {{app}} vía web.",
         "descriptionWithoutWeb": "¿No pasó nada? Intentamos iniciar su reunión en la aplicación {{app}} de escritorio.",
         "downloadApp": "Descargar la aplicación",
         "launchWebButton": "Iniciar en la Web",
@@ -248,7 +248,7 @@
         "screenSharingFailedToInstallTitle": "La extensión de uso compartido de pantalla no se pudo instalar",
         "screenSharingFirefoxPermissionDeniedError": "Algo salió mal cuando intentamos compartir su pantalla. Asegúrese de habernos dado permiso para hacerlo.",
         "screenSharingFirefoxPermissionDeniedTitle": "¡Uy! No pudimos iniciar el uso compartido de la pantalla.",
-        "screenSharingPermissionDeniedError": "¡Uy! Algo salió mal con sus permisos de extensión para compartido pantalla. Vuelva a cargar la página e intente de nuevo.",
+        "screenSharingPermissionDeniedError": "¡Uy! Algo salió mal con sus permisos de extensión para compartido pantalla. Vuelva a cargar la página e Inténtelo de nuevo.",
         "sendPrivateMessage": "Recientemente ha recibido un mensaje privado. ¿Pretendía responder a eso en privado, o quería enviar su mensaje al grupo?",
         "sendPrivateMessageCancel": "Enviar al grupo",
         "sendPrivateMessageOk": "Enviar en privado",

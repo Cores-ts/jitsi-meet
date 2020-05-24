@@ -14,7 +14,7 @@ import { openDesktopApp } from './functions';
 // eslint-disable-next-line no-unused-vars
 MiddlewareRegistry.register(store => next => action => {
     switch (action.type) {
-    case OPEN_DESKTOP_APP:
+        case OPEN_DESKTOP_APP:
         openDesktopApp(store.getState());
         break;
     }

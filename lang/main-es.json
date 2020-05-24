@@ -120,12 +120,12 @@
     },
     "deepLinking": {
         "appNotInstalled": "Necesita la aplicación móvil {{app}} para unirse a esta reunión en su teléfono.",
-        "description": "¿No pasó nada? Hemos intentado iniciar su reunión en la aplicación de escritorio {{app}}. intente de nuevo o inicie en la aplicación web {{app}}.",
-        "descriptionWithoutWeb": "¿No pasó nada? Intentamos iniciar su reunión en la aplicación de escritorio {{app}}.",
+        "description": "¿No pasó nada? Hemos intentado iniciar su reunión en la aplicación de escritorio {{app}}. Inténtelo de nuevo o inicie en la aplicación web {{app}}.",
+        "descriptionWithoutWeb": "¿No pasó nada? Hemos intentado iniciar su reunión en la aplicación de escritorio {{app}}.",
         "downloadApp": "Descargar la app",
         "launchWebButton": "Iniciar en web",
         "openApp": "Continuar a la aplicación",
-        "title": "Iniciar su reunión en {{app}}…",
+        "title": "Iniciando la reunión en {{app}}…",
         "tryAgainButton": "Intentar de nuevo en el escritorio"
     },
     "defaultLink": "ej. {{url}}",
@@ -248,7 +248,7 @@
         "screenSharingFailedToInstallTitle": "La extensión para compartir la pantalla no se pudo instalar",
         "screenSharingFirefoxPermissionDeniedError": "Algo salió mal mientras tratábamos de compartir la pantalla. Por favor, asegúrese de que nos ha dado permiso para hacerlo. ",
         "screenSharingFirefoxPermissionDeniedTitle": "OOPS! ¡ No pudimos empezar a compartir la pantalla!",
-        "screenSharingPermissionDeniedError": "Oops! Algo salió mal con sus permisos de extensión para compartir pantalla. Por favor, vuelva a cargar e intente de nuevo.",
+        "screenSharingPermissionDeniedError": "Oops! Algo salió mal con sus permisos de extensión para compartir pantalla. Por favor, vuelva a cargar e Inténtelo de nuevo.",
         "sendPrivateMessage": "Acaba de recibir un mensaje privado. ¿Desea responder de forma privada?, ¿Desea responder al grupo?",
         "sendPrivateMessageCancel": "Enviar al grupo",
         "sendPrivateMessageOk": "Enviar privado",
@@ -699,7 +699,7 @@
         "busyTitle": "El servicio de las salas está actualmente ocupado",
         "errorAlreadyInvited": "{{displayName}} ya ha sido invitado",
         "errorInvite": "La conferencia no se ha establecido aun. Por favor intente más tarde.",
-        "errorInviteFailed": "Estamos trabajando en resolver la situación. Por favor intente de nuevo más tarde.",
+        "errorInviteFailed": "Estamos trabajando en resolver la situación. Por favor Inténtelo de nuevo más tarde.",
         "errorInviteFailedTitle": "Invitar a {{displayName}} falló",
         "errorInviteTitle": "Error al invitar a la sala",
         "pending": "{{displayName}} ha sido invitado"

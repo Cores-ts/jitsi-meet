@@ -3,7 +3,7 @@
 var interfaceConfig = {
     // TO FIX: this needs to be handled from SASS variables. There are some
     // methods allowing to use variables both in css and js.
-    DEFAULT_BACKGROUND: '#474747',
+    DEFAULT_BACKGROUND: '#1b1820',
 
     /**
      * Whether or not the blurred video background for large video should be
@@ -17,27 +17,27 @@ var interfaceConfig = {
     DEFAULT_REMOTE_DISPLAY_NAME: 'Participant',
     DEFAULT_LOCAL_DISPLAY_NAME: 'me',
     SHOW_JITSI_WATERMARK: true,
-    JITSI_WATERMARK_LINK: 'https://fundingbox.com',
+    JITSI_WATERMARK_LINK: 'https://meetings.fundingbox.com',
 
     // if watermark is disabled by default, it can be shown only for guests
-    SHOW_WATERMARK_FOR_GUESTS: true,
+    SHOW_WATERMARK_FOR_GUESTS: false,
     SHOW_BRAND_WATERMARK: false,
-    BRAND_WATERMARK_LINK: '',
+    BRAND_WATERMARK_LINK: 'https://fundingbox.com',
     SHOW_POWERED_BY: false,
-    SHOW_DEEP_LINKING_IMAGE: false,
+    SHOW_DEEP_LINKING_IMAGE: true,
     GENERATE_ROOMNAMES_ON_WELCOME_PAGE: true,
     DISPLAY_WELCOME_PAGE_CONTENT: true,
-    DISPLAY_WELCOME_PAGE_TOOLBAR_ADDITIONAL_CONTENT: false,
+    DISPLAY_WELCOME_PAGE_TOOLBAR_ADDITIONAL_CONTENT: true,
     APP_NAME: 'FundingBox Meetings',
     NATIVE_APP_NAME: 'FundingBox Meetings',
     PROVIDER_NAME: 'FundingBox',
     LANG_DETECTION: false, // Allow i18n to detect the system language
-    INVITATION_POWERED_BY: true,
+    INVITATION_POWERED_BY: false,
 
     /**
      * If we should show authentication block in profile
      */
-    AUTHENTICATION_ENABLE: true,
+    AUTHENTICATION_ENABLE: false,
 
     /**
      * The name of the toolbar buttons to display in the toolbar. If present,
@@ -47,15 +47,21 @@ var interfaceConfig = {
      * jwt.
      */
     TOOLBAR_BUTTONS: [
-        'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
+        'microphone', 'camera', 'closedcaptions', 'desktop',
+        'fullscreen',
         'fodeviceselection', 'hangup', 'profile', 'chat', 'recording',
-        'livestreaming', 'etherpad', 'sharedvideo', 'settings', 'raisehand',
-        'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
-        'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone',
+        'livestreaming', 'etherpad', 'sharedvideo', 'settings',
+        'raisehand',
+        'videoquality', 'filmstrip', 'invite', 'feedback', 'stats',
+        'shortcuts',
+        'tileview', 'videobackgroundblur', 'download', 'help',
+        'mute-everyone',
         'e2ee', 'security'
     ],
 
-    SETTINGS_SECTIONS: [ 'devices', 'language', 'moderator', 'profile', 'calendar' ],
+    SETTINGS_SECTIONS: ['devices', 'language', 'moderator', 'profile',
+        'calendar'
+    ],
 
     // Determines how the video would fit the screen. 'both' would fit the whole
     // screen, 'height' would fit the original video height to the height of the
@@ -106,7 +112,7 @@ var interfaceConfig = {
     LOCAL_THUMBNAIL_RATIO: 16 / 9, // 16:9
     REMOTE_THUMBNAIL_RATIO: 1, // 1:1
     // Documentation reference for the live streaming feature.
-    LIVE_STREAMING_HELP_LINK: 'https://jitsi.org/live',
+    LIVE_STREAMING_HELP_LINK: 'https://fundingbox.com',
 
     /**
      * Whether the mobile app Jitsi Meet is to be promoted to participants
@@ -129,7 +135,7 @@ var interfaceConfig = {
      * If indicated some of the error dialogs may point to the support URL for
      * help.
      */
-    SUPPORT_URL: 'https://community.jitsi.org/',
+    SUPPORT_URL: 'https://fundingbox.com/about/contact',
 
     /**
      * Whether the connection indicator icon should hide itself based on
@@ -176,7 +182,9 @@ var interfaceConfig = {
     // has a suboptimal experience. Browsers which are not listed as optimal or
     // unsupported are considered suboptimal. Valid values are:
     // chrome, chromium, edge, electron, firefox, nwjs, opera, safari
-    OPTIMAL_BROWSERS: [ 'chrome', 'chromium', 'firefox', 'nwjs', 'electron', 'safari' ],
+    OPTIMAL_BROWSERS: ['chrome', 'chromium', 'firefox', 'nwjs', 'electron',
+        'safari'
+    ],
 
     // Browsers, in addition to those which do not fully support WebRTC, that
     // are not supported and should show the unsupported browser page.
@@ -203,10 +211,10 @@ var interfaceConfig = {
     DISABLE_JOIN_LEAVE_NOTIFICATIONS: false,
 
     /**
-    * Decides whether the chrome extension banner should be rendered on the landing page and during the meeting.
-    * If this is set to false, the banner will not be rendered at all. If set to true, the check for extension(s)
-    * being already installed is done before rendering.
-    */
+     * Decides whether the chrome extension banner should be rendered on the landing page and during the meeting.
+     * If this is set to false, the banner will not be rendered at all. If set to true, the check for extension(s)
+     * being already installed is done before rendering.
+     */
     SHOW_CHROME_EXTENSION_BANNER: false,
 
     /**
@@ -223,22 +231,37 @@ var interfaceConfig = {
     /**
      * Specify custom URL for downloading android mobile app.
      */
-    // MOBILE_DOWNLOAD_LINK_ANDROID: 'https://play.google.com/store/apps/details?id=com.fundingbox.meetings',
+    MOBILE_DOWNLOAD_LINK_ANDROID: 'https://play.google.com/store/apps/details?id=com.fundingbox.meetings',
 
     /**
      * Specify URL for downloading ios mobile app.
      */
-    // MOBILE_DOWNLOAD_LINK_IOS: 'https://itunes.apple.com/us/app/jitsi-meet/id1165103905',
+    MOBILE_DOWNLOAD_LINK_IOS: 'https://apps.apple.com/us/app/fundingbox-meetings/id1508609890',
+
+    /**
+     * Specify custom URL for downloading macos desktop app.
+     */
+    DESKTOP_DOWNLOAD_LINK_MACOS: 'https://github.com/Cores-ts/fundingbox.meetings.electron/releases/download/v1.0.4/fundingbox-meetings.dmg',
+
+    /**
+     * Specify URL for downloading windows desktop app.
+     */
+    DESKTOP_DOWNLOAD_LINK_WINDOWS: 'https://github.com/Cores-ts/fundingbox.meetings.electron/releases/download/v1.0.4/fundingbox-meetings.exe',
+
+    /**
+     * Specify URL for downloading linux desktop app.
+     */
+    DESKTOP_DOWNLOAD_LINK_LINUX: 'https://github.com/Cores-ts/fundingbox.meetings.electron/releases/download/v1.0.4/fundingbox-meetings.exe',
 
     /**
      * Specify Firebase dynamic link properties for the mobile apps.
      */
     // MOBILE_DYNAMIC_LINK: {
-    //    APN: 'org.jitsi.meet',
+    //    APN: 'com.fundingbox.meetings',
     //    APP_CODE: 'w2atb',
     //    CUSTOM_DOMAIN: undefined,
-    //    IBI: 'com.atlassian.JitsiMeet.ios',
-    //    ISI: '1165103905'
+    //    IBI: 'com.fundingbox.meetings',
+    //    ISI: '1508609890'
     // },
 
     /**

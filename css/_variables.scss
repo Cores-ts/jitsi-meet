@@ -89,7 +89,7 @@ $modalTextColor: #333;
  * Chat
  */
 $chatActionsSeparatorColor: rgb(173, 105, 112);
-$chatHeaderBackgroundColor: rgba(42, 58, 75, 0.9);
+$chatHeaderBackgroundColor: #1B1820;
 $chatInputSeparatorColor: #A4B8D1;
 $chatLocalMessageBackgroundColor: rgb(4, 98, 178);
 $chatPrivateMessageBackgroundColor: rgb(153, 69, 77);
@@ -160,30 +160,30 @@ $unsupportedDesktopBrowserTextFontSize: 21px;
 /**
  * The size of the default watermark.
  */
-$watermarkWidth: 186px;
-$watermarkHeight: 74px;
+$watermarkWidth: 286px;
+$watermarkHeight: 113px;
 
 /**
  * Welcome page variables.
  */
 $welcomePageDescriptionColor: #fff;
 $welcomePageFontFamily: inherit;
-$welcomePageBackground: linear-gradient(-90deg, #1251AE 0%, #0074FF 50%, #1251AE 100%);
+$welcomePageBackground: #1a181f;
 $welcomePageTitleColor: #fff;
 
-$welcomePageHeaderBackground: none;
+$welcomePageHeaderBackground: url(/images/bk-2@2x.png);
 $welcomePageHeaderBackgroundSmall: none;
-$welcomePageHeaderBackgroundPosition: none;
-$welcomePageHeaderBackgroundRepeat: none;
-$welcomePageHeaderBackgroundSize: none;
+$welcomePageHeaderBackgroundPosition: 100% top;
+$welcomePageHeaderBackgroundRepeat: no-repeat;
+$welcomePageHeaderBackgroundSize: 90%;
 $welcomePageHeaderPaddingBottom: 0px;
 
-$welcomePageHeaderTextMarginTop: 35px;
+$welcomePageHeaderTextMarginTop: -13px;
 $welcomePageHeaderTextMarginBottom: 35px;
 
 $welcomePageHeaderTextTitleMarginBottom: 16px;
 $welcomePageHeaderTextTitleFontSize: 2.5rem;
-$welcomePageHeaderTextTitleFontWeight: 500;
+$welcomePageHeaderTextTitleFontWeight: 800;
 $welcomePageHeaderTextTitleLineHeight: 1.18;
 $welcomePageHeaderTextTitleOpacity: 1;
 
@@ -194,14 +194,14 @@ $welcomePageHeaderTextDescriptionLineHeight: 24px;
 $welcomePageHeaderTextDescriptionMarginBottom: 20px;
 $welcomePageHeaderTextDescriptionAlignSelf: inherit;
 
-$welcomePageEnterRoomWidth: 680px;
+$welcomePageEnterRoomWidth: 50%;
 $welcomePageEnterRoomPadding: 25px 30px;
-$welcomePageEnterRoomBorderRadius: 0px;
+$welcomePageEnterRoomBorderRadius: 10px;
 
 $welcomePageEnterRoomInputContainerPadding: 0 8px 5px 0px;
-$welcomePageEnterRoomInputContainerBorderWidth: 0px 0px 2px 0px;
-$welcomePageEnterRoomInputContainerBorderStyle: solid;
-$welcomePageEnterRoomInputContainerBorderImage: linear-gradient(to right, #dee1e6, #fff) 1;
+$welcomePageEnterRoomInputContainerBorderWidth: none;
+$welcomePageEnterRoomInputContainerBorderStyle: none;
+$welcomePageEnterRoomInputContainerBorderImage: none;
 
 $welcomePageEnterRoomTitleDisplay: inherit;
 
