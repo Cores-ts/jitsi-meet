@@ -11,7 +11,7 @@ import { Platform } from '../base/react';
 export function _openDesktopApp(state: Object) { // eslint-disable-line no-unused-vars
     const { launchInWeb } = state['features/deep-linking'];
     const scheme = interfaceConfig.APP_SCHEME || 'com.fundingbox.meetings';
-    const downloadUrl = interfaceConfig[`DESKTOP_DOWNLOAD_LINK_${Platform.OS.toUpperCase()}`] || "http://test.com"
+    const downloadUrl = interfaceConfig[`DESKTOP_DOWNLOAD_LINK_${Platform.OS.toUpperCase()}`]
 
     if (downloadUrl && state['features/base/conference'].room && !launchInWeb) {
         window.location = scheme + "://" + state['features/base/conference'].room;

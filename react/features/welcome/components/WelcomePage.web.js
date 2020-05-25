@@ -180,7 +180,7 @@ class WelcomePage extends AbstractWelcomePage {
                             className = 'settings-toolbar-content'
                             ref = { this._setAdditionalToolbarContentRef } />
                         : null
-                    }
+                        }
                 </div>
                 <div className = 'header'>
                     <div className = 'header-image' />

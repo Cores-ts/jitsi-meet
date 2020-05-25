@@ -123,6 +123,7 @@
         "description": "¿No pasó nada? Hemos intentado iniciar su reunión en la aplicación de escritorio {{app}}. Inténtelo de nuevo o inicie en la aplicación web {{app}}.",
         "descriptionWithoutWeb": "¿No pasó nada? Hemos intentado iniciar su reunión en la aplicación de escritorio {{app}}.",
         "downloadApp": "Descargar la app",
+        "downloadRunApp": "Descarga y ejecuta la aplicación de escritorio",
         "launchWebButton": "Iniciar en web",
         "openApp": "Continuar a la aplicación",
         "title": "Iniciando la reunión en {{app}}…",

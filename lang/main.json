@@ -138,6 +138,7 @@
         "description": "Nothing happened? We tried launching your meeting in the {{app}} desktop app. Try again or launch it in the {{app}} web app.",
         "descriptionWithoutWeb": "Nothing happened? We tried launching your meeting in the {{app}} desktop app.",
         "downloadApp": "Download the app",
+        "downloadRunApp": "Download and run the desktop app",
         "ifDoNotHaveApp": "If you don't have the app yet: ",
         "ifHaveApp": "If you already have the app:",
         "joinInApp": "Join this meeting using the app",
@@ -831,7 +832,7 @@
         "calendar": "Calendar",
         "connectCalendarButton": "Connect your calendar",
         "connectCalendarText": "Connect your calendar to view all your meetings in {{app}}. Plus, add {{provider}} meetings to your calendar and start them with one click.",
-        "enterRoomTitle": "Start a new meeting",
+        "enterRoomTitle": "Start or join a meeting",
         "getHelp": "Get help",
         "roomNameAllowedChars": "Meeting name should not contain any of these characters: ?, &, :, ', \", %, #.",
         "go": "GO",
@@ -847,7 +848,7 @@
         "roomnameHint": "Enter the name or URL of the room you want to join. You may make a name up, just let the people you are meeting know it so that they enter the same name.",
         "sendFeedback": "Send feedback",
         "terms": "Terms",
-        "title": "Secure, fully featured, and completely free video conferencing"
+        "title": "Privacy-First video conferences"
     },
     "lonelyMeetingExperience": {
         "button": "Invite others",

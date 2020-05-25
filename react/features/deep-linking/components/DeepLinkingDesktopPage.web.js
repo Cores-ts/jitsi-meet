@@ -146,7 +146,7 @@ class DeepLinkingDesktopPage<P : Props> extends Component<P> {
                                                     href = { this._generateDownloadURL() }
                                                     onClick = { this._onDownloadApp }
                                                     target = '_blank'>
-                                                        { t(`${_TNS}.downloadApp`) }
+                                                        { t(`${_TNS}.downloadRunApp`) }
                                                 </a>
                                         </p>
                                  }
@@ -232,7 +232,7 @@ class DeepLinkingDesktopPage<P : Props> extends Component<P> {
  */
 function _mapStateToProps(state) {
     return {
-        _downloadUrl: "http://test.com" || interfaceConfig[`DESKTOP_DOWNLOAD_LINK_${Platform.OS.toUpperCase()}`]
+        _downloadUrl: interfaceConfig[`DESKTOP_DOWNLOAD_LINK_${Platform.OS.toUpperCase()}`]
     };
 }
 
