@@ -17,7 +17,7 @@ body.welcome-page {
         background-repeat: $welcomePageHeaderBackgroundRepeat;
         background-size: $welcomePageHeaderBackgroundSize;
         padding-bottom: $welcomePageHeaderPaddingBottom;
-        background-color: #242029;
+        background-color: #1b1820;
         margin: 5%;
         margin-top: 160px;
         border-radius: 30px;
@@ -66,7 +66,7 @@ body.welcome-page {
             max-width: calc(100% - 40px);
             width: $welcomePageEnterRoomWidth;
             z-index: $zindex2;
-            background-color: #232029;
+            background-color: #1b1820;
             padding: $welcomePageEnterRoomPadding;
             border-radius: $welcomePageEnterRoomBorderRadius;
             margin-right: 40%;
@@ -127,7 +127,7 @@ body.welcome-page {
             min-height: 296px;
             width: 50%;
             margin-right: 40%;
-            background: #1b1820;
+            background: #18141b;
             display: $welcomePageTabContainerDisplay;
             flex-direction: column;
             border-radius: 10px;
@@ -331,18 +331,35 @@ body.welcome-page {
 }
 
 @media only screen and (max-width: 700px) {
-    .welcome .header .header-text {
-        width: 100%;
-        margin-right: 0;
+    .welcome .header {
+        .header-text {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        #enter_room {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .tab-container {
+            width: 100%;
+            margin-right: 0;
+        }
     }
 
-    .welcome .header #enter_room {
-        width: 100%;
-        margin-right: 0;
-    }
+    .welcome .welcome-page-content .more-footer {
+        margin-top: 0!important;
+        display: block;
 
-    .welcome .header .tab-container {
-        width: 100%;
-        margin-right: 0;
+        .more-section {
+            padding: 30px;
+            margin-left: 0px;
+            margin-bottom: 30px;
+
+            .more-section-content {
+                max-height: 240px;
+            }
+        }
     }
 }
