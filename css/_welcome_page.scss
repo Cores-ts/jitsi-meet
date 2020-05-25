@@ -329,3 +329,20 @@ body.welcome-page {
     }
 
 }
+
+@media only screen and (max-width: 700px) {
+    .welcome .header .header-text {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .welcome .header #enter_room {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .welcome .header .tab-container {
+        width: 100%;
+        margin-right: 0;
+    }
+}

@@ -221,12 +221,12 @@ $welcomePageButtonLineHeight: 35px;
 /**
  * Deep-linking page variables.
  */
-$deepLinkingMobileLogoHeight: 40px;
+$deepLinkingMobileLogoHeight: 100px;
 
-$deepLinkingMobileHeaderBackground: #f1f2f5;
+$deepLinkingMobileHeaderBackground: #1b1820;
 
 $deepLinkingMobileLinkColor: inherit;
-$deepLinkingMobileTextFontSize: inherit;
+$deepLinkingMobileTextFontSize: 1.5em;
 $deepLinkingMobileTextLineHeight: inherit;
 
 $deepLinkingDialInConferenceIdMargin: 10px 0 10px 0;
@@ -255,7 +255,7 @@ $deepLinkingMobileButtonLineHeight: 2.2857142857142856em;
 $deepLinkingMobileButtonMargin: 18px auto 10px;
 $deepLinkingMobileButtonWidth: auto;
 $deepLinkingMobileButtonFontWeight: bold;
-$deepLinkingMobileButtonFontSize: inherit;
+$deepLinkingMobileButtonFontSize: 1.5em;
 
 $primaryDeepLinkingMobileButtonBorderRadius: inherit;
 
