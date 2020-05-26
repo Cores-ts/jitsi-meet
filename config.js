@@ -85,7 +85,7 @@ var config = {
 
     // Start the conference in audio only mode (no video is being received nor
     // sent).
-    // startAudioOnly: false,
+    startAudioOnly: false,
 
     // Every participant after the Nth will start audio muted.
     // startAudioMuted: 10,
@@ -146,17 +146,17 @@ var config = {
     // Desktop sharing
 
     // The ID of the jidesha extension for Chrome.
-    desktopSharingChromeExtId: null,
+    desktopSharingChromeExtId: 'iaeahbpcnoblddpoimnnjihelbhljmeo',
 
     // Whether desktop sharing should be disabled on Chrome.
-    // desktopSharingChromeDisabled: false,
+    desktopSharingChromeDisabled: false,
 
     // The media sources to use when using screen sharing with the Chrome
     // extension.
     desktopSharingChromeSources: [ 'screen', 'window', 'tab' ],
 
     // Required version of Chrome extension
-    desktopSharingChromeMinExtVersion: '0.1',
+    desktopSharingChromeMinExtVersion: '0.0.1',
 
     // Whether desktop sharing should be disabled on Firefox.
     // desktopSharingFirefoxDisabled: false,
@@ -173,7 +173,7 @@ var config = {
     // Recording
 
     // Whether to enable file recording or not.
-    // fileRecordingsEnabled: false,
+    fileRecordingsEnabled: false,
     // Enable the dropbox integration.
     // dropbox: {
     //     appKey: '<APP_KEY>' // Specify your app key here.
@@ -255,7 +255,7 @@ var config = {
     // useNicks: false,
 
     // Require users to always specify a display name.
-    // requireDisplayName: true,
+    requireDisplayName: true,
 
     // Whether to use a welcome page or not. In case it's false a random room
     // will be joined when no room is specified.

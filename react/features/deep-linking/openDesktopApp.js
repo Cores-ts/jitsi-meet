@@ -1,4 +1,5 @@
 // @flow
+import { browser } from '../base/lib-jitsi-meet';
 import { Platform } from '../base/react';
 
 /**
@@ -12,6 +13,10 @@ export function _openDesktopApp(state: Object) { // eslint-disable-line no-unuse
     const { launchInWeb } = state['features/deep-linking'];
     const scheme = interfaceConfig.APP_SCHEME || 'com.fundingbox.meetings';
     const downloadUrl = interfaceConfig[`DESKTOP_DOWNLOAD_LINK_${Platform.OS.toUpperCase()}`]
+
+    if (browser.isElectron()) {
+        return Promise.resolve(false);
+    }
 
     if (downloadUrl && state['features/base/conference'].room && !launchInWeb) {
         window.location = scheme + "://" + state['features/base/conference'].room;
