@@ -2,7 +2,7 @@
  * Move the @atlaskit/flag container up a little bit so it does not cover the
  * toolbar with the first notification.
  */
-.cjMOOK{
+.jIMojv{
     bottom: calc(#{$newToolbarSizeWithPadding}) !important;
 }
 
@@ -47,20 +47,4 @@
  */
 .toolbox-button-wth-dialog .eYJELv {
     max-height: initial;
-}
-
-/**
- * Override @atlaskit/InlineDialog styling for the video preview
- */
-.video-preview .eYJELv {
-    outline: none;
-    padding: 16px;
-}
-
-/**
- * Override @atlaskit/InlineDialog styling for the audio preview
- */
-.audio-preview .eYJELv {
-    outline: none;
-    padding: 0;
 }

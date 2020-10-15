@@ -1,18 +1,19 @@
 // @flow
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Text, View } from 'react-native';
 
 import { Avatar } from '../../../base/avatar';
 import { ColorSchemeRegistry } from '../../../base/color-scheme';
 import { BottomSheet, isDialogOpen } from '../../../base/dialog';
+import { KICK_OUT_ENABLED, getFeatureFlag } from '../../../base/flags';
 import { getParticipantDisplayName } from '../../../base/participants';
 import { connect } from '../../../base/redux';
 import { StyleType } from '../../../base/styles';
 import { PrivateMessageButton } from '../../../chat';
-
 import { hideRemoteVideoMenu } from '../../actions';
 
+import GrantModeratorButton from './GrantModeratorButton';
 import KickButton from './KickButton';
 import MuteButton from './MuteButton';
 import PinButton from './PinButton';
@@ -41,6 +42,16 @@ type Props = {
     _bottomSheetStyles: StyleType,
 
     /**
+     * Whether or not to display the kick button.
+     */
+    _disableKick: boolean,
+
+    /**
+     * Whether or not to display the remote mute buttons.
+     */
+    _disableRemoteMute: boolean,
+
+    /**
      * True if the menu is currently open, false otherwise.
      */
     _isOpen: boolean,
@@ -57,7 +68,7 @@ let RemoteVideoMenu_;
 /**
  * Class to implement a popup menu that opens upon long pressing a thumbnail.
  */
-class RemoteVideoMenu extends Component<Props> {
+class RemoteVideoMenu extends PureComponent<Props> {
     /**
      * Constructor of the component.
      *
@@ -67,6 +78,7 @@ class RemoteVideoMenu extends Component<Props> {
         super(props);
 
         this._onCancel = this._onCancel.bind(this);
+        this._renderMenuHeader = this._renderMenuHeader.bind(this);
     }
 
     /**
@@ -75,7 +87,7 @@ class RemoteVideoMenu extends Component<Props> {
      * @inheritdoc
      */
     render() {
-        const { participant } = this.props;
+        const { _disableKick, _disableRemoteMute, participant } = this.props;
         const buttonProps = {
             afterClick: this._onCancel,
             showLabel: true,
@@ -84,17 +96,12 @@ class RemoteVideoMenu extends Component<Props> {
         };
 
         return (
-            <BottomSheet onCancel = { this._onCancel }>
-                <View style = { styles.participantNameContainer }>
-                    <Avatar
-                        participantId = { participant.id }
-                        size = { AVATAR_SIZE } />
-                    <Text style = { styles.participantNameLabel }>
-                        { this.props._participantDisplayName }
-                    </Text>
-                </View>
-                <MuteButton { ...buttonProps } />
-                <KickButton { ...buttonProps } />
+            <BottomSheet
+                onCancel = { this._onCancel }
+                renderHeader = { this._renderMenuHeader }>
+                { !_disableRemoteMute && <MuteButton { ...buttonProps } /> }
+                { !_disableKick && <KickButton { ...buttonProps } /> }
+                <GrantModeratorButton { ...buttonProps } />
                 <PinButton { ...buttonProps } />
                 <PrivateMessageButton { ...buttonProps } />
             </BottomSheet>
@@ -118,6 +125,31 @@ class RemoteVideoMenu extends Component<Props> {
 
         return false;
     }
+
+    _renderMenuHeader: () => React$Element<any>;
+
+    /**
+     * Function to render the menu's header.
+     *
+     * @returns {React$Element}
+     */
+    _renderMenuHeader() {
+        const { _bottomSheetStyles, participant } = this.props;
+
+        return (
+            <View
+                style = { [
+                    _bottomSheetStyles.sheet,
+                    styles.participantNameContainer ] }>
+                <Avatar
+                    participantId = { participant.id }
+                    size = { AVATAR_SIZE } />
+                <Text style = { styles.participantNameLabel }>
+                    { this.props._participantDisplayName }
+                </Text>
+            </View>
+        );
+    }
 }
 
 /**
@@ -129,14 +161,19 @@ class RemoteVideoMenu extends Component<Props> {
  * @returns {Props}
  */
 function _mapStateToProps(state, ownProps) {
+    const kickOutEnabled = getFeatureFlag(state, KICK_OUT_ENABLED, true);
     const { participant } = ownProps;
+    const { remoteVideoMenu = {}, disableRemoteMute } = state['features/base/config'];
+    let { disableKick } = remoteVideoMenu;
+
+    disableKick = disableKick || !kickOutEnabled;
 
     return {
-        _bottomSheetStyles:
-            ColorSchemeRegistry.get(state, 'BottomSheet'),
+        _bottomSheetStyles: ColorSchemeRegistry.get(state, 'BottomSheet'),
+        _disableKick: Boolean(disableKick),
+        _disableRemoteMute: Boolean(disableRemoteMute),
         _isOpen: isDialogOpen(state, RemoteVideoMenu_),
-        _participantDisplayName: getParticipantDisplayName(
-            state, participant.id)
+        _participantDisplayName: getParticipantDisplayName(state, participant.id)
     };
 }
 
