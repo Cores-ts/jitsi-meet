@@ -38,7 +38,6 @@ var config = {
     // https://github.com/jitsi/jitsi-meet/issues/7376
     // focusUserJid: 'focus@auth.jitsi-meet.example.com',
 
-
     // Testing / experimental features.
     //
 
@@ -79,7 +78,6 @@ var config = {
     // signalling.
     // webrtcIceTcpDisable: false,
 
-
     // Media
     //
 
@@ -102,7 +100,7 @@ var config = {
 
     // Start the conference in audio only mode (no video is being received nor
     // sent).
-    // startAudioOnly: false,
+    startAudioOnly: false,
 
     // Every participant after the Nth will start audio muted.
     // startAudioMuted: 10,
@@ -175,6 +173,22 @@ var config = {
 
     // Desktop sharing
 
+    // The ID of the jidesha extension for Chrome.
+    desktopSharingChromeExtId: 'iaeahbpcnoblddpoimnnjihelbhljmeo',
+
+    // Whether desktop sharing should be disabled on Chrome.
+    desktopSharingChromeDisabled: false,
+
+    // The media sources to use when using screen sharing with the Chrome
+    // extension.
+    desktopSharingChromeSources: [ 'screen', 'window', 'tab' ],
+
+    // Required version of Chrome extension
+    desktopSharingChromeMinExtVersion: '0.0.1',
+
+    // Whether desktop sharing should be disabled on Firefox.
+    // desktopSharingFirefoxDisabled: false,
+
     // Optional desktop sharing frame rate options. Default value: min:5, max:5.
     // desktopSharingFrameRate: {
     //     min: 5,
@@ -187,7 +201,7 @@ var config = {
     // Recording
 
     // Whether to enable file recording or not.
-    // fileRecordingsEnabled: false,
+    fileRecordingsEnabled: false,
     // Enable the dropbox integration.
     // dropbox: {
     //     appKey: '<APP_KEY>' // Specify your app key here.
@@ -212,7 +226,7 @@ var config = {
 
     // Transcription (in interface_config,
     // subtitles and buttons can be configured)
-    // transcribingEnabled: false,
+    transcribingEnabled: false,
 
     // Enables automatic turning on captions when recording is started
     // autoCaptionOnRecord: false,
@@ -220,7 +234,7 @@ var config = {
     // Misc
 
     // Default value for the channel "last N" attribute. -1 for unlimited.
-    channelLastN: -1,
+    channelLastN: 5,
 
     // Provides a way to use different "last N" values based on the number of participants in the conference.
     // The keys in an Object represent number of participants and the values are "last N" to be used when number of
@@ -335,7 +349,6 @@ var config = {
     // openBridgeChannel: true,
     openBridgeChannel: 'websocket',
 
-
     // UI
     //
 
@@ -343,7 +356,7 @@ var config = {
     // hideLobbyButton: false,
 
     // Require users to always specify a display name.
-    // requireDisplayName: true,
+    requireDisplayName: true,
 
     // Whether to use a welcome page or not. In case it's false a random room
     // will be joined when no room is specified.
@@ -357,7 +370,7 @@ var config = {
     // disable1On1Mode: false,
 
     // Default language for the user interface.
-    // defaultLanguage: 'en',
+    defaultLanguage: 'en',
 
     // If true all users without a token will be considered guests and all users
     // with token will be considered non-guests. Only guests will be allowed to
@@ -371,8 +384,8 @@ var config = {
     // lockRoomGuestEnabled: false,
 
     // When enabled the password used for locking a room is restricted to up to the number of digits specified
-    // roomPasswordNumberOfDigits: 10,
-    // default: roomPasswordNumberOfDigits: false,
+    roomPasswordNumberOfDigits: 6,
+    //default: roomPasswordNumberOfDigits: true,
 
     // Message to show the users. Example: 'The service will be down for
     // maintenance at 01:00 AM GMT,
@@ -424,7 +437,6 @@ var config = {
     // This means avatars will be locally generated and callstats integration
     // will not function.
     // disableThirdPartyRequests: false,
-
 
     // Peer-To-Peer mode: used (if enabled) when there are just 2 participants.
     //
@@ -523,13 +535,13 @@ var config = {
     // Information for the chrome extension banner
     // chromeExtensionBanner: {
     //     // The chrome extension to be installed address
-    //     url: 'https://chrome.google.com/webstore/detail/jitsi-meetings/kglhbbefdnlheedjiejgomgmfplipfeb',
+    //     url: 'https://chrome.google.com/webstore/detail/fundingbox-meetings/iaeahbpcnoblddpoimnnjihelbhljmeo',
 
     //     // Extensions info which allows checking if they are installed or not
     //     chromeExtensionsInfo: [
     //         {
-    //             id: 'kglhbbefdnlheedjiejgomgmfplipfeb',
-    //             path: 'jitsi-logo-48x48.png'
+    //             id: 'iaeahbpcnoblddpoimnnjihelbhljmeo',
+    //             path: 'logo-48x48.png'
     //         }
     //     ]
     // },
@@ -683,9 +695,9 @@ var config = {
      startBitrate
      */
 
-
     // Allow all above example options to include a trailing comma and
     // prevent fear when commenting out the last value.
+    enableLipSync: false,
     makeJsonParserHappy: 'even if last key had a trailing comma'
 
     // no configuration value should follow this line.

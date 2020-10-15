@@ -67,6 +67,7 @@ type Props = {
  * @extends Component
  */
 export default class SectionList extends Component<Props> {
+
     /**
      * Implements React's {@link Component#render()}.
      *
@@ -89,4 +90,5 @@ export default class SectionList extends Component<Props> {
             </SafeAreaView>
         );
     }
+
 }

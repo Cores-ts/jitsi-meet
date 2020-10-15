@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react';
-import { Linking, View } from 'react-native';
+import { Linking, Text, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { type Dispatch } from 'redux';
 
@@ -38,7 +38,6 @@ class DialInSummary extends Component<Props> {
      */
     constructor(props: Props) {
         super(props);
-
         this._onError = this._onError.bind(this);
         this._onNavigate = this._onNavigate.bind(this);
         this._renderLoading = this._renderLoading.bind(this);
@@ -53,12 +52,21 @@ class DialInSummary extends Component<Props> {
         const { _summaryUrl } = this.props;
 
         return (
+
             <JitsiModal
                 headerProps = {{
                     headerLabelKey: 'info.label'
                 }}
                 modalId = { DIAL_IN_SUMMARY_VIEW_ID }
-                style = { styles.backDrop } >
+                style = { styles.webViewWrapper }
+                swipeable = {
+                    {
+                        closeOnTouchOutside: true,
+                        fullWidth: true,
+                        onlyLarge: true,
+                        showCloseButton: true
+                    }
+                }>
                 <WebView
                     onError = { this._onError }
                     onShouldStartLoadWithRequest = { this._onNavigate }
@@ -112,6 +120,7 @@ class DialInSummary extends Component<Props> {
      * @returns {React$Component<any>}
      */
     _renderLoading() {
+
         return (
             <View style = { styles.indicatorWrapper }>
                 <LoadingIndicator

@@ -43,8 +43,8 @@
         "audioOnly": "Lage bandbreedte"
     },
     "calendarSync": {
-        "addMeetingURL": "Een link naar een vergadering toevoegen",
-        "confirmAddLink": "Wilt u een Jitsi-link aan deze afspraak toevoegen?",
+        "addMeetingURL": "Een link naar de vergadering toevoegen",
+        "confirmAddLink": "Wilt u een Fundingbox Meetings-link aan deze gebeurtenis toevoegen?",
         "error": {
             "appConfiguration": "De agenda-integratie is niet juist ingesteld.",
             "generic": "Er is een fout opgetreden. Controleer uw agenda-instellingen of vernieuw de agenda.",
@@ -327,7 +327,7 @@
         "answer": "Beantwoorden",
         "audioCallTitle": "Inkomende oproep",
         "decline": "Negeren",
-        "productLabel": "vanuit Jitsi Meet",
+        "productLabel": "vanuit FundingBox Meetings",
         "videoCallTitle": "Inkomende video-oproep"
     },
     "info": {

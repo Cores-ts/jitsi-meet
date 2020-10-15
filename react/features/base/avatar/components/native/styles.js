@@ -72,7 +72,7 @@ export default {
         return {
             color: 'white',
             fontSize: size * 0.45,
-            fontWeight: '100'
+            fontWeight: '800'
         };
     },
 

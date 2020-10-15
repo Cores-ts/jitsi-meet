@@ -1,12 +1,19 @@
 // @flow
 
 import { ColorPalette } from '../../../../base/styles';
+import { Dimensions } from 'react-native';
+
+const panelHeight = Dimensions.get('window').height - 125;
 
 export const INDICATOR_COLOR = ColorPalette.lightGrey;
 
 const WV_BACKGROUND = 'rgb(71, 71, 71)';
 
 export default {
+
+    bar: {
+        backgroundColor: WV_BACKGROUND
+    },
 
     backDrop: {
         backgroundColor: WV_BACKGROUND
@@ -15,12 +22,20 @@ export default {
     indicatorWrapper: {
         alignItems: 'center',
         backgroundColor: ColorPalette.white,
-        height: '100%',
+        height: panelHeight,
         justifyContent: 'center'
     },
 
     webView: {
-        backgroundColor: WV_BACKGROUND,
-        flex: 1
+        flex: 1,
+        backgroundColor: 'transparent',
+        width: '100%',
+        bottom: 0
+    },
+
+    webViewWrapper: {
+        flex: 1,
+        flexDirection: 'column',
+        height: panelHeight
     }
 };

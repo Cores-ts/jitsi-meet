@@ -52,6 +52,7 @@ class WelcomePage extends AbstractWelcomePage {
 
         this.state._fieldFocused = false;
         this.state.hintBoxAnimation = new Animated.Value(0);
+        this.state.swipeablePanelActive = false;
 
         // Bind event handlers so they are only bound once per instance.
         this._onFieldFocusChange = this._onFieldFocusChange.bind(this);
@@ -231,7 +232,6 @@ class WelcomePage extends AbstractWelcomePage {
         const { t } = this.props;
         let children;
 
-
         if (this.state.joining) {
             // TouchableHighlight is picky about what its children can be, so
             // wrap it in a native component, i.e. View to avoid having to
@@ -285,9 +285,6 @@ class WelcomePage extends AbstractWelcomePage {
                     </Header>
                     <SafeAreaView style = { styles.roomContainer } >
                         <View style = { styles.joinControls } >
-                            <Text style = { styles.enterRoomText }>
-                                { t('welcomepage.roomname') }
-                            </Text>
                             <TextInput
                                 accessibilityLabel = { t(roomnameAccLabel) }
                                 autoCapitalize = 'none'
@@ -298,7 +295,7 @@ class WelcomePage extends AbstractWelcomePage {
                                 onChangeText = { this._onRoomChange }
                                 onFocus = { this._onFieldFocus }
                                 onSubmitEditing = { this._onJoin }
-                                placeholder = { this.state.roomPlaceholder }
+                                placeholder = { t('welcomepage.roomname') }
                                 placeholderTextColor = { PLACEHOLDER_TEXT_COLOR }
                                 returnKeyType = { 'go' }
                                 style = { styles.textInput }
@@ -313,8 +310,11 @@ class WelcomePage extends AbstractWelcomePage {
                         </View>
                     </SafeAreaView>
                     <WelcomePageLists disabled = { this.state._fieldFocused } />
+                    <SettingsView />
+                    <DialInSummary />
                 </View>
                 <WelcomePageSideBar />
+
                 { this._renderWelcomePageModals() }
             </LocalVideoTrackUnderlay>
         );
@@ -345,7 +345,6 @@ class WelcomePage extends AbstractWelcomePage {
     _renderWelcomePageModals() {
         return [
             <HelpView key = 'helpView' />,
-            <DialInSummary key = 'dialInSummary' />,
             <SettingsView key = 'settings' />
         ];
     }

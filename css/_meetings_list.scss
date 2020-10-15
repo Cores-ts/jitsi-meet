@@ -1,6 +1,6 @@
 .meetings-list {
     font-size: 14px;
-    color: #253858;
+    color: rgba(255, 255, 255, 0.5);
     line-height: 20px;
     text-align: left;
     text-overflow: ellipsis;
@@ -43,7 +43,7 @@
     }
 
     .item {
-        background: rgba(255,255,255,0.50);
+        background: rgb(36, 32, 41);
         box-sizing: border-box;
         display: inline-flex;
         margin-top: 5px;
@@ -53,6 +53,8 @@
         display: flex;
         flex-direction: row;
         text-align: left;
+        border-radius: 5px;
+        overflow: hidden;
 
         &:first-child {
             margin-top: 0px;
@@ -99,7 +101,8 @@
         }
 
         &.with-click-handler:hover {
-            background-color: #75A7E7;
+            background-color: #0274e0;
+            color: white;
         }
 
         .add-button {

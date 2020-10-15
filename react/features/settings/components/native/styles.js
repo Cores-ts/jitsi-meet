@@ -16,7 +16,7 @@ export default {
         alignItems: 'center',
         flexDirection: 'row',
         minHeight: 65,
-        paddingHorizontal: 8
+        paddingHorizontal: 15
     },
 
     /**
@@ -34,7 +34,8 @@ export default {
     fieldLabelContainer: {
         alignItems: 'center',
         flexDirection: 'row',
-        marginRight: 5
+        marginRight: 5,
+        marginTop: 10
     },
 
     /**
@@ -56,7 +57,7 @@ export default {
      */
     fieldSeparator: {
         borderBottomWidth: 1,
-        borderColor: 'rgba(0, 0, 0, 0.1)'
+        borderColor: 'rgba(255, 255, 255, 0.1)'
     },
 
     /**
@@ -74,35 +75,49 @@ export default {
      * Style fo the form section separator titles.
      */
     formSectionTitle: {
-        backgroundColor: 'rgba(0, 0, 0, 0.1)',
-        padding: 5
+        padding: 5,
+        paddingLeft: 15,
+        marginTop: 40
+    },
+
+    formSectionTitleText: {
+        color: '#d8d2cb',
+        fontSize: 18,
+        fontWeight: '900'
+    },
+
+    settingsForm: {
+        backgroundColor: ColorPalette.blue,
+        flex: 1
     },
 
     /**
      * Global {@code Text} color for the components.
      */
     text: {
-        color: ColorPalette.black
+        color: '#d8d2cb'
     },
 
     /**
      * Standard text input field style.
      */
     textInputField: {
-        color: ColorPalette.black,
+        color: '#d8d2cb',
         flex: 1,
         fontSize: TEXT_SIZE,
-        textAlign: 'right'
+        textAlign: 'right',
+        minHeight: 40
     },
 
     /**
      * Appended style for column layout fields.
      */
     textInputFieldColumn: {
-        backgroundColor: 'rgb(245, 245, 245)',
+        backgroundColor: '#00000040',
         borderRadius: 8,
         marginVertical: 5,
         paddingVertical: 3,
+        paddingHorizontal: 8,
         textAlign: 'left'
     }
 };

@@ -1,7 +1,8 @@
 // @flow
 
 import React from 'react';
-import { Alert, NativeModules, ScrollView, Switch, Text, TextInput } from 'react-native';
+import { Alert, NativeModules, SafeAreaView, ScrollView, Switch, Text, TextInput, View } from 'react-native';
+import jitsiLocalStorage from '../../../../../modules/util/JitsiLocalStorage';
 
 import { translate } from '../../../base/i18n';
 import { JitsiModal } from '../../../base/modal';
@@ -99,6 +100,7 @@ class SettingsView extends AbstractSettingsView<Props, State> {
      */
     constructor(props) {
         super(props);
+
         const {
             disableCallIntegration,
             disableCrashReporting,
@@ -159,7 +161,7 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                         <TextInput
                             autoCorrect = { false }
                             onChangeText = { this._onChangeDisplayName }
-                            placeholder = 'John Doe'
+                            placeholder = 'Participant'
                             textContentType = { 'name' } // iOS only
                             value = { displayName } />
                     </FormRow>
@@ -205,10 +207,13 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                             value = { startWithVideoMuted } />
                     </FormRow>
                     <FormSectionHeader
+                        label = 'settingsView.advanced' />
+                    {this._renderAdvancedSettings()}
+                    <FormSectionHeader
                         label = 'settingsView.buildInfoSection' />
                     <FormRow
                         label = 'settingsView.version'>
-                        <Text>
+                        <Text style = {{ color: 'white' }}>
                             {`${AppInfo.version} build ${AppInfo.buildNumber}`}
                         </Text>
                     </FormRow>

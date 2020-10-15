@@ -1,5 +1,5 @@
 .deep-linking-mobile {
-    background-color: #fff;
+    background-color: #1b1820;
     height: 100vh;
     overflow: auto;
     position: relative;
@@ -7,7 +7,7 @@
 
     .header {
         width: 100%;
-        height: 70px;
+        height: 120px;
         background-color: $deepLinkingMobileHeaderBackground;
         text-align: center;
         .logo {
@@ -24,7 +24,7 @@
     }
 
     &__body {
-        color: $unsupportedBrowserTextColor;
+        color: white;
         margin: auto;
         max-width: 40em;
         padding: 35px 0 40px 0;
@@ -42,8 +42,8 @@
 
     &__text {
         font-weight: bolder;
-        font-size: $deepLinkingMobileTextFontSize;
-        line-height: $deepLinkingMobileTextLineHeight;
+        font-size: $deepLinkingMobileTextFontSize!important;
+        line-height: $deepLinkingMobileTextLineHeight!important;
         padding: 10px 10px 0px 10px;
     }
 
@@ -129,6 +129,7 @@
         color: #505F79;
         font-weight: $deepLinkingMobileButtonFontWeight;
         font-size: $deepLinkingMobileButtonFontSize;
+        border-radius: 5px !important;
 
         &:active {
             background-color: $unsupportedBrowserButtonBgColor;

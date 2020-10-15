@@ -13,7 +13,7 @@ import { openDesktopApp } from './functions';
  */
 MiddlewareRegistry.register(store => next => action => {
     switch (action.type) {
-    case OPEN_DESKTOP_APP:
+        case OPEN_DESKTOP_APP:
         openDesktopApp(store.getState());
         break;
     }

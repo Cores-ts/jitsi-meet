@@ -9,10 +9,10 @@ export default {
     '_defaultTheme': {
         // Generic app theme colors that are used accross the entire app.
         // All scheme definitions below inherit these values.
-        background: 'rgb(255, 255, 255)',
+        background: 'rgb(26, 30, 33)',
         errorText: ColorPalette.red,
-        icon: 'rgb(28, 32, 37)',
-        text: 'rgb(28, 32, 37)'
+        icon: '#d8d2cb',
+        text: '#d8d2cb'
     },
     'Chat': {
         displayName: 'rgb(94, 109, 121)',
@@ -24,7 +24,7 @@ export default {
         replyIcon: 'rgb(94, 109, 121)'
     },
     'Conference': {
-        inviteButtonBackground: 'rgb(0, 119, 225)',
+        inviteButtonBackground: 'black',
         onVideoText: 'white'
     },
     'Dialog': {

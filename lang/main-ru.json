@@ -44,7 +44,7 @@
     },
     "calendarSync": {
         "addMeetingURL": "Добавить ссылку конференции",
-        "confirmAddLink": "Вы хотите добавить ссылку Jitsi к этому календарному событию?",
+        "confirmAddLink": "Вы хотите добавить ссылку Fundingbox Meetings к этому календарному событию?",
         "error": {
             "appConfiguration": "Неправильно настроена интеграция календаря.",
             "generic": "Произошла ошибка. Проверьте настройки календаря или попробуйте обновить его.",
@@ -350,7 +350,7 @@
         "answer": "Ответ",
         "audioCallTitle": "Входящий звонок",
         "decline": "Отклонить",
-        "productLabel": "из Jitsi Meet",
+        "productLabel": "из FundingBox Meetings",
         "videoCallTitle": "Входящий видеозвонок"
     },
     "info": {

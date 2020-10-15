@@ -131,7 +131,6 @@ function pollForStatus(
     };
 }
 
-
 /**
  * Action used for joining the meeting with phone audio.
  * A dial out connection is tried and a polling mechanism is used for getting the status.
@@ -195,7 +194,6 @@ export function dialOut(onSuccess: Function, onFail: Function) {
 export function initPrejoin(tracks: Object[], errors: Object) {
     return async function(dispatch: Function) {
         dispatch(setPrejoinDeviceErrors(errors));
-
 
         tracks.forEach(track => dispatch(trackAdded(track)));
     };
@@ -308,6 +306,56 @@ export function replaceVideoTrackById(deviceId: Object) {
             dispatch(setDeviceStatusWarning('prejoin.videoTrackError'));
             logger.log('Error replacing video track', err);
         }
+    };
+}
+
+/**
+ * Action used to mark audio muted.
+ *
+ * @param {boolean} value - True for muted.
+ * @returns {Object}
+ */
+export function setPrejoinAudioMuted(value: boolean) {
+    return {
+        type: SET_PREJOIN_AUDIO_MUTED,
+        value
+    };
+}
+
+/**
+ * Action used to mark video disabled.
+ *
+ * @param {boolean} value - True for muted.
+ * @returns {Object}
+ */
+export function setPrejoinVideoDisabled(value: boolean) {
+    return {
+        type: SET_PREJOIN_VIDEO_DISABLED,
+        value
+    };
+}
+
+/**
+ * Action used to mark video muted.
+ *
+ * @param {boolean} value - True for muted.
+ * @returns {Object}
+ */
+export function setPrejoinVideoMuted(value: boolean) {
+    return {
+        type: SET_PREJOIN_VIDEO_MUTED,
+        value
+    };
+}
+
+/**
+ * Action used to mark audio as disabled.
+ *
+ * @returns {Object}
+ */
+export function setAudioDisabled() {
+    return {
+        type: SET_PREJOIN_AUDIO_DISABLED
     };
 }
 

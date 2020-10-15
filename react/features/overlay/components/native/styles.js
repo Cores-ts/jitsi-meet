@@ -19,7 +19,7 @@ export default {
      */
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: ColorPalette.black
+        backgroundColor: ColorPalette.blue
     },
 
     loadingOverlayText: {
@@ -50,6 +50,6 @@ ColorSchemeRegistry.register('LoadConfigOverlay', {
     },
 
     loadingOverlayWrapper: {
-        backgroundColor: schemeColor('background')
+        backgroundColor: ColorPalette.blue//schemeColor('background')
     }
 });

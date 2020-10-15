@@ -4,14 +4,20 @@
     color: #FFF;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    /**
+     * Make the sidebar flush with the top of the toolbar. Take the size of
+     * the toolbar and subtract from 100%.
+     */
+    height: calc(100% - calc(#{$newToolbarSizeWithPadding} + 40px));
     left: -$sidebarWidth;
     overflow: hidden;
     position: absolute;
     top: 0;
     width: $sidebarWidth;
     z-index: $sideToolbarContainerZ;
-
+    border-radius: 20px;
+    margin: 20px;
+    
     /**
      * The sidebar (chat) is off-screen when hidden. Move it flush to the left
      * side of the window when it should be visible.
@@ -126,9 +132,9 @@
 }
 
 #chat-input {
-    border-top: 1px solid $chatInputSeparatorColor;
     display: flex;
     padding: 5px 10px;
+    background-color: #1b1820;
 
     * {
         background-color: transparent;

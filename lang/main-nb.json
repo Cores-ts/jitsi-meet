@@ -29,9 +29,13 @@
     },
     "calendarSync": {
         "addMeetingURL": "Legg til en møtelenke",
-        "confirmAddLink": "Ønsker du å legge til en Jitsi-lenke til denne hendelsen?",
+        "confirmAddLink": "Ønsker du å legge til en Fundingbox Meetings-lenke til denne hendelsen?",
+        "error": {
+            "appConfiguration": "",
+            "generic": "",
+            "notSignedIn": ""
+        },
         "join": "",
-        "join": "Ta del",
         "joinTooltip": "Ta del i møtet",
         "nextMeeting": "neste møte",
         "noEvents": "",

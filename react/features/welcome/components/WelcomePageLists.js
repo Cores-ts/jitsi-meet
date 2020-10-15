@@ -3,7 +3,11 @@
 import React, { Component } from 'react';
 
 import { translate } from '../../base/i18n';
-import { IconEventNote, IconRestore } from '../../base/icons';
+import {
+    IconEventNote,
+    IconRestore,
+    IconAdd
+} from '../../base/icons';
 import { PagedList } from '../../base/react';
 import { connect } from '../../base/redux';
 import { CalendarList, isCalendarEnabled } from '../../calendar-sync';
@@ -86,7 +90,7 @@ class WelcomePageLists extends Component<Props> {
                 }
             );
         }
-
+        
         return (
             <PagedList
                 defaultPage = { _defaultPage }

@@ -159,7 +159,6 @@ export function getInviteResultsForQuery(
         peopleSearchPromise = Promise.resolve([]);
     }
 
-
     let hasCountryCode = text.startsWith('+');
     let phoneNumberPromise;
 

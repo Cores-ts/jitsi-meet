@@ -83,6 +83,7 @@ class ChatInputBar extends Component<Props, State> {
                     onFocus = { this._onFocused(true) }
                     onSubmitEditing = { this._onSubmit }
                     placeholder = { this.props.t('chat.fieldPlaceHolder') }
+                    placeholderTextColor = '#d8d2cb'
                     ref = { this._onFieldReferenceAvailable }
                     returnKeyType = 'send'
                     style = { styles.inputField }

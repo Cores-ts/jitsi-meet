@@ -12,12 +12,12 @@ const SIDEBAR_HEADER_HEIGHT = 150;
 
 export const SWITCH_THUMB_COLOR = ColorPalette.blueHighlight;
 
-export const SWITCH_UNDER_COLOR = 'rgba(0, 0, 0, 0.4)';
+export const SWITCH_UNDER_COLOR = 'rgba(0, 0, 0, 0)';
 
 /**
  * The default color of text on the WelcomePage.
  */
-const TEXT_COLOR = ColorPalette.white;
+const TEXT_COLOR = '#d8d2cb';
 
 /**
  * The styles of the React {@code Components} of the feature welcome including
@@ -57,8 +57,8 @@ export default {
     button: {
         backgroundColor: ColorPalette.blue,
         borderColor: ColorPalette.blue,
-        borderRadius: 4,
-        borderWidth: 1,
+        borderRadius: 15,
+        borderWidth: 0,
         height: 30,
         justifyContent: 'center',
         paddingHorizontal: 20
@@ -69,7 +69,7 @@ export default {
      */
     buttonText: {
         alignSelf: 'center',
-        color: ColorPalette.white,
+        color: '#d8d2cb',
         fontSize: 14
     },
 
@@ -77,7 +77,7 @@ export default {
      * The style of the display name label in the side bar.
      */
     displayName: {
-        color: ColorPalette.white,
+        color: '#d8d2cb',
         fontSize: 16,
         marginTop: BoxModel.margin,
         textAlign: 'center'
@@ -203,7 +203,7 @@ export default {
      * The body of the side bar where the items are.
      */
     sideBarBody: {
-        backgroundColor: ColorPalette.white,
+        backgroundColor: '#211d28',
         flex: 1
     },
 
@@ -238,7 +238,7 @@ export default {
      * The icon in the side bar item touchables.
      */
     sideBarItemIcon: {
-        color: ColorPalette.blueHighlight,
+        color: '#d8d2cb',
         fontSize: 20,
         marginRight: 15
     },
@@ -247,7 +247,7 @@ export default {
      * The label of the side bar item touchables.
      */
     sideBarItemText: {
-        color: ColorPalette.black,
+        color: '#d8d2cb',
         fontWeight: 'bold'
     },
 
@@ -262,12 +262,12 @@ export default {
      * Room input style.
      */
     textInput: {
-        backgroundColor: 'transparent',
-        borderColor: ColorPalette.white,
-        borderRadius: 4,
+        backgroundColor: '#00000050',
+        borderColor: '#ffffff10',
+        borderRadius: 25,
         borderWidth: 1,
         color: TEXT_COLOR,
-        fontSize: 23,
+        fontSize: 18,
         height: 50,
         padding: 4,
         textAlign: 'center'

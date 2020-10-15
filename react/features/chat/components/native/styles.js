@@ -3,7 +3,7 @@
 import { ColorSchemeRegistry, schemeColor } from '../../../base/color-scheme';
 import { BoxModel, ColorPalette } from '../../../base/styles';
 
-const BUBBLE_RADIUS = 8;
+const BUBBLE_RADIUS = 20;
 
 /**
  * The styles of the feature chat.
@@ -24,7 +24,7 @@ export default {
     },
 
     chatLink: {
-        color: ColorPalette.blue
+        color: 'blue'
     },
 
     /**
@@ -52,14 +52,14 @@ export default {
 
     inputBar: {
         alignItems: 'center',
-        borderTopColor: 'rgb(209, 219, 231)',
+        borderTopColor: ColorPalette.darkGrey,
         borderTopWidth: 1,
         flexDirection: 'row',
         paddingHorizontal: BoxModel.padding
     },
 
     inputField: {
-        color: 'rgb(28, 32, 37)',
+        color: 'white',
         flex: 1,
         height: 48
     },
@@ -151,7 +151,7 @@ ColorSchemeRegistry.register('Chat', {
 
     localMessageBubble: {
         backgroundColor: schemeColor('localMsgBackground'),
-        borderTopRightRadius: 0
+        borderTopRightRadius: 5
     },
 
     messageRecipientCancelIcon: {
@@ -183,7 +183,7 @@ ColorSchemeRegistry.register('Chat', {
 
     remoteMessageBubble: {
         backgroundColor: schemeColor('remoteMsgBackground'),
-        borderTopLeftRadius: 0
+        borderTopLeftRadius: 5
     },
 
     replyContainer: {

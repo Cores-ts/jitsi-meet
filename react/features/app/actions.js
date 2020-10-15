@@ -37,7 +37,6 @@ import logger from './logger';
 declare var APP: Object;
 declare var interfaceConfig: Object;
 
-
 /**
  * Triggers an in-app navigation to a specific route. Allows navigation to be
  * abstracted between the mobile/React Native and Web/React applications.
@@ -50,7 +49,7 @@ declare var interfaceConfig: Object;
 export function appNavigate(uri: ?string) {
     return async (dispatch: Dispatch<any>, getState: Function) => {
         let location = parseURIString(uri);
-
+                
         // If the specified location (URI) does not identify a host, use the app's
         // default.
         if (!location || !location.host) {

@@ -44,7 +44,7 @@
     },
     "calendarSync": {
         "addMeetingURL": "Ajustar un ligam de reünion",
-        "confirmAddLink": "Volètz ajustar un ligam Jitsi cap a aqueste eveniment ?",
+        "confirmAddLink": "Volètz ajustar un ligam Fundingbox Meetings cap a aqueste eveniment ?",
         "error": {
             "appConfiguration": "L’integracion del calendièr es pas corrèctament configurada.",
             "generic": "Una error s’es producha. Verificatz vòstres paramètres de calendièr o ensajatz de l’actualizar.",
@@ -316,7 +316,7 @@
         "answer": "Uèi",
         "audioCallTitle": "Sonada entranta",
         "decline": "Regetar",
-        "productLabel": "de Jitsi Meet estant",
+        "productLabel": "de Fundingbox Meetings estant",
         "videoCallTitle": "Sonada vidèo entranta"
     },
     "info": {

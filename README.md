@@ -39,9 +39,9 @@ You can download source archives (produced by ```make source-package```):
 
 [<img src="resources/img/f-droid-badge.png" height="50">](https://f-droid.org/en/packages/org.jitsi.meet/)
 
-* [iOS](https://itunes.apple.com/us/app/jitsi-meet/id1165103905)
+* [iOS](https://itunes.apple.com/us/app/jitsi-meet/id1508609890)
 
-[<img src="resources/img/appstore-badge.png" height="50">](https://itunes.apple.com/us/app/jitsi-meet/id1165103905)
+[<img src="resources/img/appstore-badge.png" height="50">](https://itunes.apple.com/us/app/jitsi-meet/id1508609890)
 
 You can also sign up for our open beta testing here:
 

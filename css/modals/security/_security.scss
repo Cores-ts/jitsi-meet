@@ -47,10 +47,15 @@
     }
 }
 
-.new-toolbox .toolbox-content .toolbox-icon.toggled.security-toolbar-button {
-    border-width: 0;
+.new-toolbox .toolbox-content .toolbox-icon.security-toolbar-button {
+    &:hover {
+        background: #E91E63;
+    }
+}
 
-    &:not(:hover) {
-        background: unset;
+.new-toolbox .toolbox-content .toolbox-icon.toggled.security-toolbar-button {
+    background: #E91E63;
+    &:hover {
+        background: #1b1820;
     }
 }

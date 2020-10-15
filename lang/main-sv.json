@@ -29,7 +29,7 @@
     },
     "calendarSync": {
         "addMeetingURL": "Lägg till en möteslänk",
-        "confirmAddLink": "Vill du lägga till en Jitsi-länk i händelsen?",
+        "confirmAddLink": "Vill du lägga till en Fundingbox Meetings-länk i händelsen?",
         "error": {
             "appConfiguration": "Kalenderintegrationen är inte rätt inställd.",
             "generic": "Ett fel har inträffat. Kontrollera dina kalenderinställningar eller uppdatera kalendern.",
@@ -294,8 +294,8 @@
     "incomingCall": {
         "answer": "Svara",
         "audioCallTitle": "Inkommande samtal",
-        "decline": "Avvisa",
-        "productLabel": "från Jitsi Meet",
+        "decline": "Förkasta",
+        "productLabel": "från FundingBox Meetings",
         "videoCallTitle": "Inkommande videosamtal"
     },
     "info": {

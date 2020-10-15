@@ -116,12 +116,18 @@ export default class NavigateSectionListItem extends Component<Props> {
         const { item, onLongPress, onPress, secondaryAction } = this.props;
 
         return (
-            <AvatarListItem
-                item = { item }
-                onLongPress = { onLongPress }
-                onPress = { onPress } >
-                { secondaryAction && this._renderSecondaryAction() }
-            </AvatarListItem>
+            <Swipeout
+                autoClose = { true }
+                backgroundColor={ColorPalette.transparent}
+                right = { right }>
+                <AvatarListItem
+                    item = { item }
+                    onLongPress = { onLongPress }
+                    onPress = { this.props.onPress } >
+                    { this.props.secondaryAction
+                            && this._renderSecondaryAction() }
+                </AvatarListItem>
+            </Swipeout>
         );
     }
 }

@@ -1,9 +1,11 @@
 // @flow
 
 import { BoxModel, ColorPalette } from '../../../styles';
+import { Dimensions } from "react-native";
 
-const OVERLAY_FONT_COLOR = 'rgba(255, 255, 255, 0.6)';
+const OVERLAY_FONT_COLOR = 'rgba(255, 255, 255, 0.9)';
 const SECONDARY_ACTION_BUTTON_SIZE = 30;
+const iconPosition = Math.round(Dimensions.get('window').width/2) - 55;
 
 export const AVATAR_SIZE = 65;
 export const UNDERLAY_COLOR = 'rgba(255, 255, 255, 0.2)';
@@ -27,14 +29,16 @@ const PAGED_LIST_STYLES = {
         alignItems: 'center',
         flexDirection: 'column',
         justifyContent: 'center',
-        padding: BoxModel.padding / 2
+        padding: BoxModel.padding / 2,
+        backgroundColor: 'transparent',
+        paddingVertical: 15
     },
 
     /**
      * Additional style for the active indicator icon (Android).
      */
     pageIndicatorActive: {
-        color: ColorPalette.white
+        color: '#fff'
     },
 
     /**
@@ -44,7 +48,8 @@ const PAGED_LIST_STYLES = {
         alignItems: 'center',
         backgroundColor: ColorPalette.blue,
         flexDirection: 'row',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+      
     },
 
     pageIndicatorContent: {
@@ -57,15 +62,19 @@ const PAGED_LIST_STYLES = {
      * Icon of the page indicator (Android).
      */
     pageIndicatorIcon: {
-        color: ColorPalette.blueHighlight,
-        fontSize: 24
+        color: '#fff',
+        fontSize: 30,
+        display: 'none'
     },
 
     /**
      * Label of the page indicator (Android).
      */
     pageIndicatorText: {
-        color: ColorPalette.blueHighlight
+        color: '#555c61',
+        fontSize: 17,
+        fontFamily: 'Avenir',
+        fontWeight: '800'
     },
 
     /**
@@ -117,7 +126,7 @@ const SECTION_LIST_STYLES = {
      * The top level container style of the list.
      */
     container: {
-        flex: 1
+        flex: 1,
     },
 
     list: {
@@ -129,7 +138,19 @@ const SECTION_LIST_STYLES = {
         alignItems: 'center',
         flex: 1,
         flexDirection: 'row',
-        padding: 5
+        padding: 5,
+        paddingLeft: 10,
+        marginTop: 10,
+        marginLeft: 13,
+        marginRight: 13,
+        borderRadius: 5,
+        borderLeftWidth: 4,
+        borderLeftColor: '#4342ff',
+        backgroundColor: '#00000030'
+    },
+
+    lastListItem: {
+        marginBottom: 100
     },
 
     listItemDetails: {
@@ -140,28 +161,36 @@ const SECTION_LIST_STYLES = {
     },
 
     listItemText: {
-        color: OVERLAY_FONT_COLOR,
-        fontSize: 14
+        color: 'rgba(255, 255, 255, 0.5)',
+        fontSize: 12,
+        marginLeft: 10
     },
 
     listItemTitle: {
-        fontWeight: 'bold',
+        color: '#d8d2cb',
+        fontWeight: '700',
         fontSize: 16
     },
 
     listSection: {
         alignItems: 'center',
-        backgroundColor: 'rgba(255, 255, 255, 0.2)',
-        flex: 1,
+        backgroundColor: '#000',
+        flex: 0,
         flexDirection: 'row',
         paddingVertical: 5,
-        paddingHorizontal: 10
+        paddingHorizontal: 20,
+        marginTop: 40,
+        marginBottom: 10,
+        marginHorizontal: 10,
+        width: 'auto',
+        borderRadius: 20,
+        alignSelf: 'flex-start'
     },
 
     listSectionText: {
-        color: OVERLAY_FONT_COLOR,
-        fontSize: 14,
-        fontWeight: 'normal'
+        color: '#d8d2cb',
+        fontSize: 18,
+        fontWeight: '800'
     },
 
     pullToRefresh: {
@@ -179,8 +208,8 @@ const SECTION_LIST_STYLES = {
     },
 
     pullToRefreshText: {
-        backgroundColor: 'transparent',
-        color: OVERLAY_FONT_COLOR
+        color: OVERLAY_FONT_COLOR,
+        fontWeight: '600'
     },
 
     secondaryActionContainer: {

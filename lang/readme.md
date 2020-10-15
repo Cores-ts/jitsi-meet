@@ -1,16 +1,14 @@
-Jitsi Meet Translation
+Fundingbox Meetings Translation
 ==========================
-Jitsi Meet uses [i18next](http://i18next.com) library for translation.
+Fundingbox Meetings uses [i18next](http://i18next.com) library for translation.
 i18next uses separate json files for each language.
 
 
-Translating Jitsi Meet
+Translating Fundingbox Meetings
 ======================
-The translation of Jitsi Meet is handled editing manually the language files.
+The translation of Fundingbox Meetings is handled editing manually the language files.
 
 Development
-===========
-If you want to add new functionality for Jitsi Meet and you have texts that need to be translated you must add key and value in main.json file in English for each translatable text.
 Than you can use the key to get the translated text for the current language.
 
 You can add translatable text in the HTML:

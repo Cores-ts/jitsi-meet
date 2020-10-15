@@ -3,7 +3,7 @@
 /**
  * Style variables
  */
-$baseFontFamily: -apple-system, BlinkMacSystemFont, 'open_sanslight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$baseFontFamily: "Avenir", -apple-system, BlinkMacSystemFont, 'open_sanslight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $hangupColor: #bf2117;
 $hangupFontSize: 2em;
 
@@ -19,7 +19,6 @@ $thumbnailVideoMargin: 2px;
 $thumbnailsBorder: 2px;
 $thumbnailVideoBorder: 2px;
 $filmstripToggleButtonWidth: 17px;
-
 
 /**
  * Color variables.
@@ -90,7 +89,7 @@ $modalTextColor: #333;
  * Chat
  */
 $chatActionsSeparatorColor: rgb(173, 105, 112);
-$chatHeaderBackgroundColor: rgba(42, 58, 75, 0.9);
+$chatHeaderBackgroundColor: #1B1820;
 $chatInputSeparatorColor: #A4B8D1;
 $chatLocalMessageBackgroundColor: rgb(4, 98, 178);
 $chatPrivateMessageBackgroundColor: rgb(153, 69, 77);
@@ -128,7 +127,6 @@ $centeredVideoLabelZ: 1010;
 $popoverZ: 1015;
 $overlayZ: 1016;
 
-
 /**
  * Font Colors
  */
@@ -161,8 +159,8 @@ $unsupportedDesktopBrowserTextFontSize: 21px;
 /**
  * The size of the default watermark.
  */
-$watermarkWidth: 186px;
-$watermarkHeight: 74px;
+$watermarkWidth: 286px;
+$watermarkHeight: 113px;
 
 $welcomePageWatermarkWidth: 186px;
 $welcomePageWatermarkHeight: 74px;
@@ -172,25 +170,25 @@ $welcomePageWatermarkHeight: 74px;
  */
 $welcomePageDescriptionColor: #fff;
 $welcomePageFontFamily: inherit;
-$welcomePageBackground: linear-gradient(-90deg, #1251AE 0%, #0074FF 50%, #1251AE 100%);
+$welcomePageBackground: #1a181f;
 $welcomePageTitleColor: #fff;
 
-$welcomePageHeaderBackground: none;
+$welcomePageHeaderBackground: url(/images/bk-2@2x.png);
 $welcomePageHeaderBackgroundSmall: none;
-$welcomePageHeaderBackgroundPosition: none;
-$welcomePageHeaderBackgroundRepeat: none;
-$welcomePageHeaderBackgroundSize: none;
+$welcomePageHeaderBackgroundPosition: 100% top;
+$welcomePageHeaderBackgroundRepeat: no-repeat;
+$welcomePageHeaderBackgroundSize: 90%;
 $welcomePageHeaderPaddingBottom: 0px;
 $welcomePageHeaderMinHeight: fit-content;
 
-$welcomePageHeaderTextMarginTop: 35px;
+$welcomePageHeaderTextMarginTop: -13px;
 $welcomePageHeaderTextMarginBottom: 35px;
 $welcomePageHeaderTextDisplay: flex;
 $welcomePageHeaderTextWidth: 650px;
 
 $welcomePageHeaderTextTitleMarginBottom: 16px;
 $welcomePageHeaderTextTitleFontSize: 2.5rem;
-$welcomePageHeaderTextTitleFontWeight: 500;
+$welcomePageHeaderTextTitleFontWeight: 900;
 $welcomePageHeaderTextTitleLineHeight: 1.18;
 $welcomePageHeaderTextTitleOpacity: 1;
 
@@ -204,12 +202,12 @@ $welcomePageHeaderTextDescriptionAlignSelf: inherit;
 $welcomePageEnterRoomDisplay: flex;
 $welcomePageEnterRoomWidth: 680px;
 $welcomePageEnterRoomPadding: 25px 30px;
-$welcomePageEnterRoomBorderRadius: 0px;
+$welcomePageEnterRoomBorderRadius: 10px;
 
 $welcomePageEnterRoomInputContainerPadding: 0 8px 5px 0px;
-$welcomePageEnterRoomInputContainerBorderWidth: 0px 0px 2px 0px;
-$welcomePageEnterRoomInputContainerBorderStyle: solid;
-$welcomePageEnterRoomInputContainerBorderImage: linear-gradient(to right, #dee1e6, #fff) 1;
+$welcomePageEnterRoomInputContainerBorderWidth: none;
+$welcomePageEnterRoomInputContainerBorderStyle: none;
+$welcomePageEnterRoomInputContainerBorderImage: none;
 
 $welcomePageEnterRoomTitleDisplay: inherit;
 
@@ -222,19 +220,19 @@ $welcomePageButtonWidth: 51px;
 $welcomePageButtonMinWidth: inherit;
 $welcomePageButtonFontSize: 14px;
 $welcomePageButtonHeight: 35px;
-$welcomePageButtonFontWeight: inherit;
+$welcomePageButtonFontWeight: 800;
 $welcomePageButtonBorderRadius: 4px;
 $welcomePageButtonLineHeight: 35px;
 
 /**
  * Deep-linking page variables.
  */
-$deepLinkingMobileLogoHeight: 40px;
+$deepLinkingMobileLogoHeight: 100px;
 
-$deepLinkingMobileHeaderBackground: #f1f2f5;
+$deepLinkingMobileHeaderBackground: #1b1820;
 
 $deepLinkingMobileLinkColor: inherit;
-$deepLinkingMobileTextFontSize: inherit;
+$deepLinkingMobileTextFontSize: 1.5em;
 $deepLinkingMobileTextLineHeight: inherit;
 
 $deepLinkingDialInConferenceIdMargin: 10px 0 10px 0;
@@ -263,7 +261,7 @@ $deepLinkingMobileButtonLineHeight: 2.2857142857142856em;
 $deepLinkingMobileButtonMargin: 18px auto 10px;
 $deepLinkingMobileButtonWidth: auto;
 $deepLinkingMobileButtonFontWeight: bold;
-$deepLinkingMobileButtonFontSize: inherit;
+$deepLinkingMobileButtonFontSize: 1.5em;
 
 $primaryDeepLinkingMobileButtonBorderRadius: inherit;
 

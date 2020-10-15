@@ -283,6 +283,9 @@ PODS:
     - React-cxxreact (= 0.61.5-jitsi.2)
     - React-jsi (= 0.61.5-jitsi.2)
   - React-jsinspector (0.61.5-jitsi.2)
+  - react-native-app-auth (5.1.1):
+    - AppAuth (= 1.2.0)
+    - React
   - react-native-background-timer (2.4.0):
     - React
   - react-native-calendar-events (2.0.0):
@@ -393,6 +396,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-app-auth (from `../node_modules/react-native-app-auth`)
   - react-native-background-timer (from `../node_modules/react-native-background-timer`)
   - react-native-calendar-events (from `../node_modules/react-native-calendar-events`)
   - react-native-keep-awake (from `../node_modules/react-native-keep-awake`)
@@ -472,6 +476,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-app-auth:
+    :path: "../node_modules/react-native-app-auth"
   react-native-background-timer:
     :path: "../node_modules/react-native-background-timer"
   react-native-calendar-events:

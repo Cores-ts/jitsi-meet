@@ -95,7 +95,6 @@ class DeepLinkingMobilePage extends Component<Props> {
         const downloadButtonClassName
             = `${_SNS}__button ${_SNS}__button_primary`;
 
-
         const onOpenLinkProperties = _downloadUrl
             ? {
                 // When opening a link to the download page, we want to let the
@@ -196,15 +195,15 @@ class DeepLinkingMobilePage extends Component<Props> {
         // interfaceConfig.MOBILE_DYNAMIC_LINK check:
         // https://firebase.google.com/docs/dynamic-links/create-manually
         const {
-            APN = 'org.jitsi.meet',
+            APN = 'com.fundingbox.meetings',
             APP_CODE = 'w2atb',
             CUSTOM_DOMAIN = undefined,
-            IBI = 'com.atlassian.JitsiMeet.ios',
-            ISI = '1165103905'
+            IBI = 'com.fundingbox.meetings',
+            ISI = '1508609890'
         } = interfaceConfig.MOBILE_DYNAMIC_LINK || {};
 
         const domain = CUSTOM_DOMAIN ?? `https://${APP_CODE}.app.goo.gl`;
-        const IUS = interfaceConfig.APP_SCHEME || 'org.jitsi.meet';
+        const IUS = interfaceConfig.APP_SCHEME || 'com.fundingbox.meetings';
 
         return `${domain}/?link=${
             encodeURIComponent(window.location.href)}&apn=${

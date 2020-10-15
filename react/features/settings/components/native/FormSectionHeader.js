@@ -49,7 +49,7 @@ class FormSectionHeader extends Component<Props> {
                     styles.formSectionTitle,
                     style
                 ] } >
-                <Text>
+                <Text style = { styles.formSectionTitleText }>
                     { t(label) }
                 </Text>
             </View>

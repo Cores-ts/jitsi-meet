@@ -10,7 +10,7 @@ export const ColorPalette = {
     /**
      * The application's background color.
      */
-    appBackground: BLACK,
+    appBackground: '#231f2a',
 
     /**
      * The application's definition of the default color black. Generally,
@@ -19,13 +19,13 @@ export const ColorPalette = {
      */
     black: BLACK,
     blackBlue: 'rgb(0, 3, 6)',
-    blue: '#17A0DB',
-    blueHighlight: '#1081b2',
+    blue: '#1b191f',
+    blueHighlight: '#000',
     buttonUnderlay: '#495258',
     darkGrey: '#555555',
     green: '#40b183',
     lightGrey: '#AAAAAA',
-    overflowMenuItemUnderlay: '#EEEEEE',
+    overflowMenuItemUnderlay: 'blue',
     red: '#D00000',
     transparent: 'rgba(0, 0, 0, 0)',
     warning: 'rgb(215, 121, 118)',

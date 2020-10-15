@@ -126,6 +126,10 @@ class PagedList extends Component<Props, State> {
         if (this.state.pageIndex === indicatorIndex) {
             return styles.pageIndicatorActive;
         }
+        
+        if (indicatorIndex === 1) {
+            return styles.pageIndicatorPlus;
+        }
 
         return null;
     }
@@ -249,19 +253,13 @@ class PagedList extends Component<Props, State> {
                 disabled = { disabled }
                 key = { index }
                 onPress = { this._onSelectPage(index) }
-                style = { styles.pageIndicator } >
+                style = { [ styles.pageIndicator, this._getIndicatorStyle(index) ] } >
                 <View style = { styles.pageIndicatorContent }>
                     <Icon
                         src = { page.icon }
-                        style = { [
-                            styles.pageIndicatorIcon,
-                            this._getIndicatorStyle(index)
-                        ] } />
+                        style = { styles.pageIndicatorIcon } />
                     <Text
-                        style = { [
-                            styles.pageIndicatorText,
-                            this._getIndicatorStyle(index)
-                        ] }>
+                        style = { [ styles.pageIndicatorText, this._getIndicatorStyle(index) ] }>
                         { page.title }
                     </Text>
                 </View>

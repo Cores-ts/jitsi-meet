@@ -28,7 +28,7 @@
     },
     "calendarSync": {
         "addMeetingURL": "Aggiungi un collegamento alla conferenza",
-        "confirmAddLink": "Vuoi aggiungere un collegamento Jitsi a questo evento?",
+        "confirmAddLink": "Vuoi aggiungere un collegamento Fundingbox Meetings a questo evento?",
         "error": {
             "appConfiguration": "L'integrazione del calendario non è configurata in modo appropriato.",
             "generic": "È stato riscontrato un errore. Controllare le impostazioni del calendario o ricaricare la pagina.",
@@ -273,7 +273,7 @@
         "answer": "Rispondi",
         "audioCallTitle": "Chiamata in arrivo",
         "decline": "Scarta",
-        "productLabel": "da Jitsi Meet",
+        "productLabel": "da FundingBox Meetings",
         "videoCallTitle": "Videochiamata in arrivo"
     },
     "info": {
